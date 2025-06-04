@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .logo{
     width: 150px;
     height: 150px;
@@ -9,12 +13,95 @@
     gap: 20px;
 
 }
-a{
+.menu{
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
     color:#00561b;
 }
-a:hover{
+.menu:hover{
     color:#ff7f00;
+}
+.logo-footer{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.col{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.texte-footer{
+    font-size: 14px;
+    color: white;
+}
+H4{
+    font-size: 20px;
+    color: #00561b;
+    font-weight: bold;
+}
+.p-footer{
+    color: white;
+}
+.footer-menu{
+    color: white;
+    text-decoration: none;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.logo-footer {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.texte-footer {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-col a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.socials img {
+  width: 24px;
+  margin-right: 10px;
+}
+.footer-bottom{
+    text-align: center;
+    margin-top: auto;
 }
