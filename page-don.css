@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+  max-width: 100%;
+}
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -104,4 +108,70 @@ footer {
 .footer-bottom{
     text-align: center;
     margin-top: auto;
+}
+.titre{
+  margin-top: 50px;
+  color: #00561b;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #ff7f00;
+  font-style: italic;
+  font-size: 50px;
+}
+.don{
+  text-align: center;
+  font-size:18px ;
+}
+.formul{
+  margin: 20px;
+}
+label{
+  color: #00561b;
+  margin-left: 3px;
+}
+input, textarea{
+  border-radius: 8px;
+  border: solid 1px #00561b;
+  width: 100%;
+  
+}
+select{
+  border-radius: 8px;
+  width: 100%;
+  height: 30px;
+  border-color: #00561b;
+}
+.formulai{
+  width: 50%;
+}
+.coul{
+  background-color: #00561b;
+  border-radius: 8px;
+  width: 50%;
+  height: 435px;
+}
+.doncoeur{
+  margin-top: 3px;
+  border-radius: 12px;
+  border: 2px solid white;
+}
+.texteimg{
+  color: white;
+  text-align: center;
+}
+.btn{
+ display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.bouton{
+  padding:  3px 15%;
+  color: white;
+  background-color: #ff7f00;
+  border: 1px solid #00561b;
+  border-radius: 8px;
+}
+.bouton:hover{
+  background-color: #00561b;
 }
