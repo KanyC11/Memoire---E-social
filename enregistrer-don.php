@@ -1,6 +1,6 @@
 <?php
 // connexion a la base de donne
-$conn= new mysqli("localhost","root"."","don-projet");
+$conn= new mysqli("localhost","root","","don_projet");
 
 // verifie la connexion
 if($conn-> connect_error){
