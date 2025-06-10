@@ -36,24 +36,24 @@
  </div>
 
     <div class="aide2">
-<form action="">
+<form action="aide.php" method="post">
 <p>Prenom & Nom</p>
-<input type="text" name="" placeholder="Nom complet">
+<input type="text" name="nom-prenom" placeholder="Nom complet">
 <p>Adresse</p>
-<input type="text" name="" placeholder="Adresse">
+<input type="text" name="adresse" placeholder="Adresse">
 <p>Numéro de téléphone</p>
-<input type="text" name="" placeholder="Téléphone">
+<input type="text" name="telephone" placeholder="Téléphone">
 <p>Email</p>
-<input type="email" name="" placeholder="Mail">
+<input type="email" name="mail" placeholder="Mail">
 <p>Type de demande</p>
-<select name="les demandes" id="" style="color: gray;">
-    <option value="">Veillez sélectionner votre demande </option>
+<select name="les-demandes" id="" style="color: gray;">
+    <option value="selection">Veillez sélectionner votre demande </option>
     <option value="Don de sang">Don de sang</option>
-    <option value="">Nourriture</option>
-    <option value="">Argent</option>
-    <option value="">Materiel</option>
-    <option value="">Vetement</option>
-    <option value="">Autres</option>
+    <option value="nourriture">Nourriture</option>
+    <option value="argent">Argent</option>
+    <option value="materiel">Materiel</option>
+    <option value="vetement">Vetement</option>
+    <option value="autres">Autres</option>
     </select>
     <p>Description</p>
     <textarea name="Description"  id="" cols="30" rows="10" placeholder="Tapez ici..."></textarea><br/>
