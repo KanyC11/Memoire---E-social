@@ -1,6 +1,6 @@
 <?php
 // connexion a la base de donne
-$conn= new mysqli("localhost","root","","don_projet");
+$conn= new mysqli("localhost","root","","don");
 
 // verifie la connexion
 if($conn-> connect_error){
@@ -11,13 +11,13 @@ $prenomnom = $email = $adresse = $description = $telephone = $typedon = $soutien
 
 
 // Récupération des données du formulaire
-$prenomnom= $_POST['prenomnom'];
-$adresse= $_POST['adresse'];
-$telephone= $_POST['telephone'];
-$email= $_POST['email'];
-$typedon= $_POST['typedon'];
-$soutiens= $_POST['soutiens'];
-$description= $_POST['description'];
+$prenomnom= htmlspecialchars(strip_tags(trim($_POST['prenomnom'])));
+$adresse= htmlspecialchars(strip_tags(trim($_POST['adresse'])));
+$telephone= htmlspecialchars(strip_tags(trim($_POST['telephone'])));
+$email= htmlspecialchars(strip_tags(trim($_POST['email'])));
+$typedon= htmlspecialchars(strip_tags(trim($_POST['typedon'])));
+$soutiens= htmlspecialchars(strip_tags(trim($_POST['soutiens'])));
+$description= htmlspecialchars(strip_tags(trim($_POST['description'])));
 
 // requete sql insertion
 $sql= "INSERT INTO dons (prenomnom,adresse,telephone,email,typedon,description,soutiens)
