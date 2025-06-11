@@ -36,9 +36,9 @@
  </div>
 
     <div class="aide2">
-<form action="aide.php" method="post">
+<form action="aide.php" method="POST">
 <p>Prenom & Nom</p>
-<input type="text" name="nom-prenom" placeholder="Nom complet">
+<input type="text" name="nom_prenom" placeholder="Nom complet">
 <p>Adresse</p>
 <input type="text" name="adresse" placeholder="Adresse">
 <p>Numéro de téléphone</p>
@@ -46,7 +46,7 @@
 <p>Email</p>
 <input type="email" name="mail" placeholder="Mail">
 <p>Type de demande</p>
-<select name="les-demandes" id="" style="color: gray;">
+<select name="les_demandes" id="" style="color: gray;">
     <option value="selection">Veillez sélectionner votre demande </option>
     <option value="Don de sang">Don de sang</option>
     <option value="nourriture">Nourriture</option>
@@ -56,8 +56,9 @@
     <option value="autres">Autres</option>
     </select>
     <p>Description</p>
-    <textarea name="Description"  id="" cols="30" rows="10" placeholder="Tapez ici..."></textarea><br/>
-    <input type="submit" value="Envoyer" class="donner">
+    <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..."></textarea><br/>
+    <input type="submit" value="envoyer" class="donner">
+    <!-- <button type="submit" value="envoyer">Envoyer</button> -->
 
 </form>
     </div>

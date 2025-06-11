@@ -1,20 +1,33 @@
-<?php
-// verification pour reccuperer les valeurs saisi par l'utilisateur
-if(isset($_POST['Envoyer'])){
-    if(isset($_POST['nom-prenom']) AND isset($_POST['adresse']) AND isset($_POST['telephone']) AND isset($_POST['mail']) AND isset($_POST['les-demandes']) AND isset($_POST['Description']))
-    {
-      if(!empty($_POST['nom-prenom']) AND !empty($_POST['adresse']) AND !empty($_POST['telephone']) AND !empty($_POST['mail']) AND !empty($_POST['les-demandes']) AND !empty($_POST['Description']))
-    {
-        //recuperation des données du formulaire
-      $nom_prenom = htmlspecialchars($_POST['nom-prenom']);
-    $adresse = htmlspecialchars($_POST['adresse']);
-    $telephone = htmlspecialchars($_POST['telephone']);
-    $email = htmlspecialchars($_POST['mail']);
-    $type_demande = htmlspecialchars($_POST['les-demandes']);
-    $description = htmlspecialchars($_POST['Description']);  
-    }  
-    }
+<!-- <?php
+// connexion a la base de donne
+$conn= new mysqli("localhost","root","","dons");
+
+// verifie la connexion
+if($conn-> connect_error){
+    die("Connexion  échouée:". $connect_error);
+}
+// créer les variables et les initialisées à vide
+$nom_prenom = $email = $adresse = $descriptions = $telephone = $demandes = "";
+
+
+// Récupération des données du formulaire
+$nom_prenom=htmlspecialchars( $_POST['nom_prenom']);
+$adresse=htmlspecialchars( $_POST['adresse']);
+$telephone= htmlspecialchars($_POST['telephone']);
+$email=htmlspecialchars( $_POST['mail']);
+$demandes= htmlspecialchars($_POST['les_demandes']);
+$descriptions=htmlspecialchars( $_POST['descriptions']);
+
+// requete sql insertion
+$sql= "INSERT INTO aides (nom_prenom,adresse,telephone,mail,les_demandes,descriptions)
+      VALUES ('$nom_prenom' ,'$adresse', '$telephone','$email','$demandes','$descriptions' )";
+
+if($conn->query($sql)=== TRUE){
+    echo " Merci pour votre demande de don ";
+}else{
+    echo"Erreur : ". $sql . "<br/>" . $conn->error;
 }
 
+$conn->close();
 
-?> 
+?>
