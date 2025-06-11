@@ -1,7 +1,21 @@
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+
+    .hero-section {
+      background: url('banner.jpg.jpeg') center/cover no-repeat;
+      color: #ff7f00;
+      text-align: center;
+      padding: 100px 20px;
     }
+    .btn-orange {
+      background-color: orange;
+      color: white;
+    }
+    .icon-box {
+      padding: 20px;
+      background: #f8f9fa;
+      text-align: center;
+      border-radius: 10px;
+    }
+ 
 
 *{
   box-sizing: border-box;
