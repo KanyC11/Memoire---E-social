@@ -181,3 +181,11 @@ textarea{
 ::placeholder{
     font-family:'Times New Roman', Times, serif;
 }
+label.required::after {
+    content: " *";
+    color: red;
+}
+label{
+  color: white;
+  padding-left: 80px;
+}

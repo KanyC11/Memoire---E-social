@@ -30,36 +30,39 @@
 <div class="dernier">Ensemble nous semons des graines  d’espoir,<br> de solidarité et de compassion. <br>
     Vos demandes seront traitées avec  amour <br> et dans les régles <br> de la confidentialité. 
     Vous n’ étes pas  seule<br> nous sommes là pour <br> vous tendre la main  et vous redonner le sourir <br>
-       << un don, un sourire >>
+       &lt; &lt; un don, un sourire &lt; &lt;
 </div>
 
  </div>
 
     <div class="aide2">
 <form action="aide.php" method="POST">
-<p>Prenom & Nom</p>
-<input type="text" name="nom_prenom" placeholder="Nom complet">
-<p>Adresse</p>
-<input type="text" name="adresse" placeholder="Adresse">
-<p>Numéro de téléphone</p>
-<input type="text" name="telephone" placeholder="Téléphone">
-<p>Email</p>
-<input type="email" name="mail" placeholder="Mail">
-<p>Type de demande</p>
-<select name="les_demandes" id="" style="color: gray;">
-    <option value="selection">Veillez sélectionner votre demande </option>
+
+<label for="nom_prenom" class="required">Nom & Prénom</label>
+<input type="text" name="nom_prenom" placeholder="Nom complet" required> <br><br>
+
+<label for="Adresse" class="required">Adresse</label> <br>
+<input type="text" name="adresse" placeholder="Adresse" required><br> <br>
+<label for="telephone" class="required">Numéro de téléphone</label><br>
+<input type="text" name="telephone" placeholder="Téléphone" required> <br><br>
+<label for="mail" class="required">Email</label> <br>
+<input type="email" name="mail" placeholder="Mail" required><br><br>
+<label for="demande" class="required">Type de demande</label><br> 
+<select name="les_demandes" id="" style="color: gray;" required> <br>
+    <option value="selection">Veillez sélectionner votre demande </option><br>
     <option value="Don de sang">Don de sang</option>
     <option value="nourriture">Nourriture</option>
     <option value="argent">Argent</option>
     <option value="materiel">Materiel</option>
     <option value="vetement">Vetement</option>
     <option value="autres">Autres</option>
-    </select>
-    <p>Description</p>
-    <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..."></textarea><br/>
+    </select><br> <br>
+    <label for="descriptions" class="required">Description</label><br>
+    <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..." required></textarea><br/>
     <input type="submit" value="envoyer" class="donner">
-    <!-- <button type="submit" value="envoyer">Envoyer</button> -->
+    
 
+    
 </form>
     </div>
 </div>
