@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 09 juin 2025 à 17:52
+-- Généré le : jeu. 12 juin 2025 à 13:53
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `don`
+-- Base de données : `dons`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `dons`
+-- Structure de la table `donations`
 --
 
-CREATE TABLE `dons` (
+CREATE TABLE `donations` (
   `id` int(11) NOT NULL,
   `prenomnom` varchar(100) DEFAULT NULL,
   `adresse` varchar(255) DEFAULT NULL,
@@ -39,20 +39,24 @@ CREATE TABLE `dons` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `dons`
+-- Déchargement des données de la table `donations`
 --
 
-INSERT INTO `dons` (`id`, `prenomnom`, `adresse`, `telephone`, `email`, `soutiens`, `typedon`, `description`) VALUES
-(1, 'kany cisse', 'Thies', '771702465', 'cissekany@gmail.com', 'je souhaite faire don de banc et de jeux', '04', '4');
+INSERT INTO `donations` (`id`, `prenomnom`, `adresse`, `telephone`, `email`, `soutiens`, `typedon`, `description`) VALUES
+(1, 'kany cisse', 'Thies', '771702465', 'cissekany141@gmail.com', 'j&#039;offres des habits pour enfants de 10-14 ans', '01', '2'),
+(2, 'kany cisse', 'Thies', '771702465', 'cissekany141@gmail.com', 'j&#039;offres des habits pour enfants de 10-14 ans', '01', '2'),
+(3, 'kany cisse', 'Thies', '771702465', 'cissekany141@gmail.com', 'j&#039;offres des habits pour enfants de 10-14 ans', '01', '2'),
+(4, 'kany cisse', 'Thies', '771702465', 'cissekany141@gmail.com', 'j&#039;ai envoyer 10 mil par wave', '03', '1'),
+(8, 'kany cisse', 'Thies', '771702465', 'cissekany@gmail.com', 'j&#039;offres des sacs de riz', '02', '3');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `dons`
+-- Index pour la table `donations`
 --
-ALTER TABLE `dons`
+ALTER TABLE `donations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -60,10 +64,10 @@ ALTER TABLE `dons`
 --
 
 --
--- AUTO_INCREMENT pour la table `dons`
+-- AUTO_INCREMENT pour la table `donations`
 --
-ALTER TABLE `dons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `donations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

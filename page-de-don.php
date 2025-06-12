@@ -1,3 +1,44 @@
+<?php
+$message= null;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+// Récupération des données du formulaire
+$prenomnom= htmlspecialchars(strip_tags(trim($_POST['prenomnom'])));
+$adresse= htmlspecialchars(strip_tags(trim($_POST['adresse'])));
+$telephone= htmlspecialchars(strip_tags(trim($_POST['telephone'])));
+$email= htmlspecialchars(strip_tags(trim($_POST['email'])));
+$typedon= htmlspecialchars(strip_tags(trim($_POST['typedon'])));
+$soutiens= htmlspecialchars(strip_tags(trim($_POST['soutiens'])));
+$description= htmlspecialchars(strip_tags(trim($_POST['description'])));
+
+    // Vérification que tous les champs sont remplis
+    if (
+        empty($prenomnom) || empty($adresse) || empty($telephone) || empty($email) ||
+        $typedon === "-" || $soutiens === "-" || empty($description)
+    ) {
+        $message = "❌ Veuillez remplir tous les champs du formulaire.";
+    } else {
+        // Connexion à la base de données
+        $conn = new mysqli("localhost", "root", "", "dons");
+
+        if ($conn->connect_error) {
+            die("Connexion échouée: " . $conn->connect_error);
+        }
+// requete sql insertion
+$stmt= $conn->prepare("INSERT INTO donations (prenomnom,adresse,telephone,email,typedon,description,soutiens)
+      VALUES (?,?,?,?,?,?,?)");
+//  "sssssss" signifie : 7 chaînes (string)
+$stmt-> bind_param("sssssss",$prenomnom,$adresse,$telephone,$email,$typedon,$soutiens,$description);
+if($stmt->execute()){
+    $message = "🎉 Votre don a bien été reçu, merci infiniment !";
+}else{
+    $message = "Une erreur est survenue";
+}
+$stmt->close();
+$conn->close();
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +66,7 @@
     <p class="don">Un petit geste, un grand impact.</p>
     <div class="row formul">
         <div class="col formulai">
-            <form action="enregistrer-don.php" method="POST">
+            <form action="" method="POST">
                 <label for="prenomnom">Prénom et nom </label> <br>
                 <input type="text" id="prenomnom" name="prenomnom" placeholder="Prenom et nom"><br>
                 <label for="adresse">Adresse</label><br>
@@ -67,17 +108,21 @@
         <button type="submit" class="bouton">Envoyer</button>
     </div>
     </form>
+    <?php if (!is_null($message)): ?>
+<div id="message" class="alert alert-info text-center">
+    <?php echo $message; ?>
+</div>
+<?php endif; ?>
+
     <div class="row">
         <div class="col">
+            <p style="margin-left: 30px;">Pour faire un don en espèces, veuillez remplir le formulaire puis scanner l’un des QR codes.</p>
             <img src="images/wave_Plan de travail 1.jpg" alt="">
         </div>
         <div class="col"></div>
 
     </div>
-
-
-
-
+ 
 
 
     <footer>

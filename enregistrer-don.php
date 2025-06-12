@@ -1,6 +1,6 @@
 <?php
 // connexion a la base de donne
-$conn= new mysqli("localhost","root","","don");
+$conn= new mysqli("localhost","root","","dons");
 
 // verifie la connexion
 if($conn-> connect_error){
@@ -20,7 +20,7 @@ $soutiens= htmlspecialchars(strip_tags(trim($_POST['soutiens'])));
 $description= htmlspecialchars(strip_tags(trim($_POST['description'])));
 
 // requete sql insertion
-$sql= "INSERT INTO dons (prenomnom,adresse,telephone,email,typedon,description,soutiens)
+$sql= "INSERT INTO donations (prenomnom,adresse,telephone,email,typedon,description,soutiens)
       VALUES ('$prenomnom' ,'$adresse', '$telephone','$email','$typedon', '$soutiens', '$description' )";
 
 if($conn->query($sql)=== TRUE){
