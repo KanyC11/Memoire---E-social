@@ -40,14 +40,14 @@
 <form action="" method="POST">
 
 <label for="nom_prenom" class="required">Nom & Prénom</label>
-<input type="text" name="nom_prenom" placeholder="Nom complet" required> <br><br>
+<input type="text" name="nom_prenom" placeholder="Nom complet" required> <br>
 
 <label for="Adresse" class="required">Adresse</label> <br>
-<input type="text" name="adresse" placeholder="Adresse" required><br> <br>
+<input type="text" name="adresse" placeholder="Adresse" required><br>
 <label for="telephone" class="required">Numéro de téléphone</label><br>
-<input type="text" name="telephone" placeholder="Téléphone" required> <br><br>
+<input type="text" name="telephone" placeholder="Téléphone" required> <br>
 <label for="mail" class="required">Email</label> <br>
-<input type="email" name="mail" placeholder="Mail" required><br><br>
+<input type="email" name="mail" placeholder="Mail" required><br>
 <label for="demande" class="required">Type de demande</label><br> 
 <select name="les_demandes" id="" style="color: gray;" required> <br>
     <option value="selection">Veillez sélectionner votre demande </option><br>
@@ -57,11 +57,11 @@
     <option value="materiel">Materiel</option>
     <option value="vetement">Vetement</option>
     <option value="autres">Autres</option>
-    </select><br> <br>
+    </select><br>
     <label for="descriptions" class="required">Description</label><br>
     <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..." required></textarea><br/>
     <input type="submit" value="envoyer" class="donner">
-    <div id="merciMessage" style="display: none; color: white; background-color: green; padding: 10px; margin-top: 10px; border-radius: 5px; text-align: center;">
+    <div id="merciMessage">
   Merci pour votre demande de don. Nous vous reviendrons ultérieurement.
     </div>
 </form>

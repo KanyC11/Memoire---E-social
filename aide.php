@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // connexion a la base de donne
 $conn= new mysqli("localhost","root","","dons");
 
