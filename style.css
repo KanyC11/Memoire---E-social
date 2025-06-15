@@ -4,6 +4,15 @@
       color: #ff7f00;
       text-align: center;
       padding: 100px 30px;
+      height: 90vh;
+      filter: brightness(0.6);
+    }
+    .carousel-caption{
+      bottom: 30%;
+    }
+    .carousel-caption p {
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
     .btn-orange {
       background-color: orange;
