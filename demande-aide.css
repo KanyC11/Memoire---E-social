@@ -134,7 +134,21 @@ input,select{
     margin-left: 80px;
     padding-left: 20px;
     font-family: 'Times New Roman', Times, serif;
-   
+    border: none !important;
+}
+select {
+    color: gray;
+}
+select:valid {
+    color: black;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: rgb(254, 253, 253) !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 p{
     margin-left: 80px;

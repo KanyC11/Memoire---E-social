@@ -49,18 +49,18 @@
 <label for="mail" class="required">Email</label> <br>
 <input type="email" name="mail" placeholder="Mail" required><br>
 <label for="demande" class="required">Type de demande</label><br> 
-<select name="les_demandes" id="" style="color: gray;" required> <br>
-    <option value="selection">Veillez sélectionner votre demande </option><br>
+<select name="les_demandes" required> 
+    <option value="" disabled selected >Veillez sélectionner votre demande </option>
     <option value="Don de sang">Don de sang</option>
     <option value="nourriture">Nourriture</option>
     <option value="argent">Argent</option>
-    <option value="materiel">Materiel</option>
-    <option value="vetement">Vetement</option>
+    <option value="materiel">Matériel</option>
+    <option value="vetement">Vêtement</option>
     <option value="autres">Autres</option>
-    </select><br>
+    </select>
     <label for="descriptions" class="required">Description</label><br>
     <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..." required></textarea><br/>
-    <input type="submit" value="envoyer" class="donner">
+    <input type="submit" value="Envoyer" class="donner">
     <div id="merciMessage">
   Merci pour votre demande de don. Nous vous reviendrons ultérieurement.
     </div>
@@ -69,8 +69,7 @@
 </div>
 
 
-
-    <footer>
+<footer>
 
         <div class="row foot" style="background-color: #ff7f00;height: 200px;">
             <div class="col">
