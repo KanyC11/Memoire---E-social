@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['Email'])) {
+    // Rediriger vers la page de connexion si non connecté
+    header("Location: connexion.html");
+    exit();
+}
 $message= null;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
