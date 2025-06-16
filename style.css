@@ -56,6 +56,42 @@ body{
     .banner-content h1{
       color: #ff7f00;
     }
+    .stat-box{
+      background-color: white;
+      color: #00561b;
+      border: 2px solid #00561b;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    section{
+      scroll-margin-top: 80px;
+    }
+    .orange-title-underline{
+      color: #ff7f00;
+      display: inline-block;
+      position: relative;
+    }
+    .orange-title-underline::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 3PX;
+      background-color: white;
+    }
+    .btn-warning{
+      color: white;
+      background-color:#f57c00 ;
+      border: none;
+    }
+    .btn-warning:hover{
+      background-color: #e65100;
+    }
+    h2.text-success{
+      text-transform: uppercase;
+    }
  
 
 .logo-footer{
