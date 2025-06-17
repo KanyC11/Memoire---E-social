@@ -47,11 +47,13 @@ body{
     z-index: 1;
     }
     .banner-content {
-      position: relative;
+      position: absolute;
+      bottom: 5%;
       z-index: 2;
       text-align: center;
-      top: 50%;
+      top: 50%; left: 10%;
       transform: translateY(-50%);
+     
     }
     .banner-content h1{
       color: #ff7f00;
@@ -65,6 +67,7 @@ body{
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       margin-right: 0;
       transition: all 0.3s ease-in-out;
+      text-align: center;
     
     }
     .stat-box:hover{
@@ -72,13 +75,13 @@ body{
       box-shadow: 0 4px 12 px rgba(0, 0, 0, 0.2);
     }
     .step-1{
-      margin-top: 350px;
+      margin-top: 150px;
     }
     .step-2{
-      margin-top: 350px;
+      margin-top: 150px;
     }
     .step-3{
-      margin-top: 350px;
+      margin-top: 150px;
     }
 
     section{
