@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['Email'])) {
+    // Redirection de l'utilisateur vers la page de connexion si il n'est pas connecté
+    header("Location: connexion.php");
+    exit();
+}
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // connexion a la base de donne
 $conn= new mysqli("localhost","root","","dons");
