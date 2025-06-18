@@ -83,30 +83,33 @@ body{
     .step-3{
       margin-top: 150px;
     }
-
+ <!-- DONS URGENTS-->
     section{
       scroll-margin-top: 80px;
     }
-   
     .section-title{
-      color: #004d26;
-      font-weight: bold;
+      color: #2d5a27;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-decoration: underline;
+      text-decoration-color: #ff8c42;
     }
-    .urgence-section{
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      padding: 20px;
-      display: flex;
+    .urgence-container{
+      background-color: #00561b;
+      grid-template-columns: 1fr 1fr;
+      display: grid;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 20px;
+      gap: 3rem;
+      margin-top: 3rem;
     }
     .urgence-img{
-      width: 100%;
-      max-width: 320px;
-      border-radius: 10px;
+     flex: 1 1 40%;
     }
-    .urgence-content{
-      flex: 1;
+    .urgence-img img{
+     width: 100%;
+     border-radius: 10px;
     }
     .urgence-title{
       color: #ff7700;
@@ -116,19 +119,33 @@ body{
       text-decoration-color: white;
       text-underline-offset: 4px;
     }
+    .urgence-text p{
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+
+    }
     .urgence-btn{
-      background-color: #ff7700;
+      background: #ff8c42;
       color: white;
       border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
     .urgence-btn:hover{
       background-color: #e06600;
     }
+      <!-- MISSION -- >
+      
  
     
-
+ 
 .logo-footer{
     width: 100px;
     height: 100px;
