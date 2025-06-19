@@ -142,34 +142,26 @@ body{
       background-color: #e06600;
     }
       <!-- MISSION -- >
-    .container{
-      display: grid;
-       grid-template-columns: 1fr 1fr;
-       gap: 3rem;
-       text-align: center;
-       ;
-    }
-    .order-1{
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #555;
-    }
-    .text-success{
-      color: #2d5a27;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      text-decoration: underline;
-      text-decoration-color: #ff8c42;
-      text-align: center;
-    }
-    .order-2{
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-    }
+      #mission.row{
+        align-items: center;
+      }
+      #mission img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+      .mission-title{
+        font-size: 2rem;
+        color: #00561b;
+        text-decoration: underline;
+        text-decoration-color: #ff7f00;
+        text-align: center;
+      }
+      .mission-text{
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #444;
+      }
      <!-- POURQUOI NOUS SOUTENIR -- >
      .container{
       padding: 3rem 0;
@@ -254,17 +246,49 @@ body{
        }
         <!-- DEMANDE DE DON -- >
         .don-section{
-          position: relative;
-          background-image: url(images/aide.jpg);
+          position: absolute;
+          background-image: url('images/aide.jpg')center/cover no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 100px 20px;
+          background-repeat: no-repeat;
+          min-height: 500px;
+          padding: 40px 20px;
           display: flex;
           justify-content: center;
           text-align: center;
         }
         .don-box{
-
+           background-color: rgba(255, 255, 255,0.92);
+           border: 2px solid #007a33;
+           border-radius: 20px;
+           max-width: 700px;
+           padding: 40px 30px;
+           width: 100%;
+           text-align: center;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .don-box h2{
+          color: #007a33;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        .don-box p{
+          color: #444;
+          font-size: 1.1rem;
+          margin-bottom: 30px;
+        }
+        .don-btn{
+          background-color: #00561b;
+          border: none;
+          color: white;
+          padding: 12px 24px;
+          font-size: 1rem;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+        .don-btn:hover{
+          background-color: #e06600;
         }
        <!-- REMERCIEMENT -- >
        .merci-section{
@@ -277,12 +301,14 @@ body{
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 20px;
+        text-align: center;
        }
        .merci-text{
         font-size: 1.1rem;
         color: #333;
         max-width: 800px;
         margin: 0 auto 40px auto;
+        text-align: center;
        }
        .merci-images{
         display: flex;
@@ -291,10 +317,10 @@ body{
         gap: 15px;
        }
        .merci-images img{
-        width: 200px;
-        height: 150px;
+        width: 300px;
+        height: 200px;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
        }
 
@@ -312,7 +338,7 @@ body{
  }
  .collab-logo{
   width: 100px;
-  height: 70px;
+  height: 100px;
   object-fit: contain;
   background: white;
   border-radius: 10px;
@@ -401,7 +427,6 @@ footer {
   height: auto;
   margin-bottom: 15px;
 }
-
 .texte-footer {
   font-size: 14px;
   line-height: 1.6;
