@@ -166,6 +166,19 @@ $conn->close();
             </div>
     </footer>
 
+     <!-- javascript -->
+      <script>
+  // Attend que la page soit chargée
+  window.addEventListener("DOMContentLoaded", function () {
+    // Après 10 secondes (10 000 ms), on cache le message
+    setTimeout(function () {
+      var msg = document.getElementById("message");
+      if (msg) {
+        msg.style.display = "none";
+      }
+    }, 10000); // 10000 = 10 secondes
+  });
+</script>
 </body>
 
 </html>
