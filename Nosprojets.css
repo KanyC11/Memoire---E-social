@@ -366,6 +366,20 @@ footer {
   text-decoration: underline;
 }
 
+
+.socials a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: white;
+}
+
+
 .socials img {
   width: 24px;
   margin-right: 10px;
