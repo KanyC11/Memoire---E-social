@@ -1,324 +1,232 @@
-*{
+
+* {
   box-sizing: border-box;
   max-width: 100%;
   font-family: 'Times New Roman', serif;
 }
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.logo{
-    width: 150px;
-    height: 150px;
-}
-.entete{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 20px;
 
-}
-.menu{
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    color:#00561b;
-}
-.menu:hover{
-    color:#ff7f00;
-}
-.logo-footer{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-}
-.col{
-    margin-left: 5px;
-    margin-top: 5px;
-}
-.texte-footer{
-    font-size: 14px;
-    color: white;
-}
-H4{
-    font-size: 20px;
-    color: #00561b;
-    font-weight: bold;
-}
-.p-footer{
-    color: white;
-}
-.footer-menu{
-    color: white;
-    text-decoration: none;
-}
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-right: 0;
+    margin-bottom: 30px;
+}
 
-/* CSS pour les cartes de projets */
+.entete {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+}
+
+.menu {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #00561b;
+}
+
+.menu:hover {
+  color: #ff7f00;
+}
+
+.logo-footer {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.col {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.texte-footer {
+  font-size: 14px;
+  color: white;
+}
+
+h4 {
+  font-size: 20px;
+  color: #00561b;
+  font-weight: bold;
+}
+
+.p-footer {
+  color: white;
+  margin-left: -2px;
+}
+
+.footer-menu {
+  color: white;
+  text-decoration: none;
+}
+
+/* Cartes projets */
 .project-card {
-    border-radius: 15px;
-    overflow: hidden;
+  border-radius: 15px;
+  overflow: hidden;
 }
+
+.projets .container-fluid {
+    max-width: 1200px;  /* Largeur maximale du conteneur */
+    margin: 0 auto;     /* Centrage horizontal */
+    margin-right: 0;
+}
+
 
 .project-card .card-img-top {
-    border-radius: 45px 45px 0 0;
-    width: 100%;
-    height: 250px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Maintient les proportions et coupe si nécessaire */
-    object-position: center; /* Centre l'image */
+  border-radius: 45px 45px 0 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project-card .card-body {
-    background-color: #00561b;
-    border-radius: 0 0 45px 45px;
-    color: white;
+  background-color: #00561b;
+  border-radius: 0 0 45px 45px;
+  color: white;
 }
 
 .project-card .btn-warning {
-    background-color: #ff7f00;
-    border-color: #ff7f00;
-    color: white;
-    border-radius: 25px;
+  background-color: #ff7f00;
+  border-color: #ff7f00;
+  color: white;
+  border-radius: 25px;
 }
 
-/* Section Nos Actions */
+/* Nos Actions */
 .nos-actions {
-    padding: 48px 0;
-    background-color: #f8f9fa;
+  padding: 48px 0;
+  background-color: #f8f9fa;
 }
 
-.nos-actions-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+.nos-actions .row {
+  margin-bottom: 0 !important;
 }
 
-.nos-actions-title {
-    color: #228B22;
-    font-size: 3.5rem;
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
+.nos-actions .col-12,
+.nos-actions .col-md-6 {
+  padding: 0 !important;
+}
+
+.action-box {
+  border: 3px solid #ff7f00;
+  overflow: hidden;
+  margin: 0 !important;
+  background: white;
+  border-radius: 0;
+  font-size: 45px;
+
+}
+
+.action-box1 {
+     border: 5px solid #00561b;
+  overflow: hidden;
+  background-color: #00561b;
+   margin: 0 !important;
+  color: white;
+  border-radius: 0;
+   font-size: 45px;
+}
+
+.taille-uniforme {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 2px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.section-title {
+  color: #00561b;
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title-underline,
+.title-underline1 {
+  height: 4px;
+  background-color: #ff7f00;
+  margin: 0 auto 30px auto;
 }
 
 .title-underline {
-    height: 8px;
-    background-color: #FF8C00;
-    width: 300px;
-    margin: 0 auto 30px auto;
+  width: 400px;
 }
 
-.nos-actions-subtitle {
-    font-size: 21px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
+.title-underline1 {
+  width: 250px;
 }
 
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+.intro-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
-.action-card {
-    border: 4px solid #FF8C00;
-    border-radius: 15px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-width: 450px;
-    width: 100%;
+.action-content {
+  padding: 20px;
+  text-align: center;
 }
 
-.action-card-img {
-    height: 250px;
-    object-fit: cover;
-    width: 100%;
+.action-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.action-card-body {
-    padding: 25px;
-    background-color: white;
+.green-section {
+  background-color: #00561b;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.action-card-text {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    font-family: Arial, sans-serif;
+.green-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.blood-donation-header {
-    background: linear-gradient(135deg, #228B22, #32CD32);
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
-
-.blood-donation-title {
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    margin-top: 0;
-    font-family: Arial, sans-serif;
-}
-
-.blood-donation-text {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Action Container */
-.action-container {
-    background-color: #00561b;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.action-img {
-    border-radius: 10px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.action-title {
-    color: #ff7f00;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.action-description {
-    color: white;
-    line-height: 1.6;
-}
-
-.action-img-small {
-    /* Style pour les petites images d'actions */
+.green-text {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Footer */
+
+/*marge pour le logo footer*/
+footer {
+    background-color: #ff7f00;
+    padding: 30px 0;
+}
 .foot {
-    background-color: #ff7f00;
-    height: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-
-.footer-bottom {
-    background-color: #ff7f00;
-}
-
-/* Styles responsive pour mobile Pour avoir la même taille d'image */
-@media (max-width: 768px) {
-    .nos-actions-title {
-        font-size: 2.5rem !important;
-    }
-    
-    .title-underline {
-        width: 200px !important;
-    }
-    
-    .nos-actions-subtitle {
-        font-size: 1.1rem !important;
-        padding: 0 15px !important;
-    }
-    
-    .action-card-text {
-        font-size: 1rem !important;
-    }
-    
-    .cards-container {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-}
-
-
-.section-title {
-            color: #00561b;
-            font-size: 4rem;
-            font-weight: bold;
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-         .title-underline {
-            height: 8px;
-            background-color: #ff7f00;
-            width: 300px;
-            margin: 0 auto 30px auto;
-        }
-        
-        .intro-text {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        
-        .action-box {
-            border: 3px solid #ff7f00;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            background: white;
-        }
-        
-        .action-content {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .action-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .action-text {
-            font-size: 1.1rem;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .green-section {
-            background-color: #00561b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .green-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .green-text {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-
-
-
 
 
 footer {
@@ -336,12 +244,6 @@ footer {
 .footer-col {
   flex: 1 1 250px;
   margin: 10px;
-}
-
-.logo-footer {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
 }
 
 .texte-footer {
@@ -366,28 +268,46 @@ footer {
   text-decoration: underline;
 }
 
-
 .socials a {
-    display: inline-block;
-    margin-right: 15px;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .socials a:hover {
-    color: white;
+  color: white;
 }
-
 
 .socials img {
   width: 24px;
   margin-right: 10px;
 }
-.footer-bottom{
-    text-align: center;
-    margin-top: auto;
+
+.footer-bottom {
+  text-align: center;
+  margin-top: auto;
 }
-  
-  
-  
+
+/* Responsive 
+@media (max-width: 768px) {
+  .nos-actions-title {
+    font-size: 2.5rem !important;
+  }
+  .title-underline {
+    width: 200px !important;
+  }
+  .nos-actions-subtitle {
+    font-size: 1.1rem !important;
+    padding: 0 15px !important;
+  }
+  .action-card-text {
+    font-size: 1rem !important;
+  }
+  .cards-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+*/
