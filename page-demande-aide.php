@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['Email'])) {
-    // Redirection de l'utilisateur vers la page de connexion si il n'est pas connecté
-    header("Location: connexion.php");
-    exit();
-}
+// if (!isset($_SESSION['Email'])) {
+//     // Redirection de l'utilisateur vers la page de connexion si il n'est pas connecté
+//     header("Location: connexion.php");
+//     exit();
+// }
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // connexion a la base de donne
 $conn= new mysqli("localhost","root","","dons");
@@ -47,7 +47,7 @@ $conn->close();
 </head>
 
 <body>
-    <nav class="entete">
+   <nav class="entete">
         <img src="images/don-du-coeur.jpg" alt="" class="logo">
         <a href="index.html" class="menu">Accueil</a>
         <a href="page-a-propos.html" class="menu">A propos de nous</a>
@@ -55,7 +55,7 @@ $conn->close();
         <a href="page-de-don.html" class="menu">Faire un don</a>
         <a href="page-demamde-aide.html" class="menu">Demande d'aide</a>
         <a href="page-connexion.html" class="menu">Connexion</a>
-    </nav>
+    </nav><br><br>
 
 
 
@@ -96,12 +96,15 @@ $conn->close();
     <label for="descriptions" class="required">Description</label><br>
     <textarea name="descriptions"  id="" cols="30" rows="10" placeholder="Tapez ici..." required></textarea><br/>
     <input type="submit" value="Envoyer" class="donner">
-    <div id="merciMessage">
-  Merci pour votre demande de don. Nous vous reviendrons ultérieurement.
-    </div>
+    
 </form>
     </div>
-</div>
+</div><br><br>
+<div id="merciMessage"  class="alert alert-info text-center">
+  Merci pour votre demande de don. Nous vous reviendrons ultérieurement.
+    </div>
+<br><br><br>
+
 
 
 <footer>

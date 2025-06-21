@@ -11,6 +11,6 @@
     // Masquer le message après 5 secondes
     setTimeout(() => {
       merciMessage.style.display = "none";
-      form.submit(); // Soumettre le formulaire après 5s
-    }, 5000);
+      form.submit(); // Soumettre le formulaire après 7s
+    }, 7000);
   });
