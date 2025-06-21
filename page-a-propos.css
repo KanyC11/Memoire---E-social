@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     max-width: 100%;
+    font-family: 'Times New Roman', Times, serif;
   }
   body{
       margin: 0;
@@ -19,9 +20,12 @@
   }
   .menu{
       text-decoration: none;
-      font-weight: bold;
-      font-size: 20px;
-      color:#00561b;
+    font-weight: bold;
+    font-family: Times New Roman, serif;
+    font-size: 22px;
+    color:#00561b;
+    margin-left:30px;
+
   }
   .menu:hover{
       color:#ff7f00;
@@ -46,6 +50,7 @@
   }
   .p-footer{
       color: white;
+      margin-left: -2px;
   }
   .footer-menu{
       color: white;
@@ -75,8 +80,9 @@
   
   .logo-footer {
     width: 80px;
-    height: auto;
-    margin-bottom: 15px;
+  height: auto;
+  margin-bottom: 15px;
+
   }
   
   .texte-footer {
@@ -110,10 +116,12 @@
       margin-top: auto;
   }
   .hero{
-    background: url('images/vol1.jpg') no-repeat center center/cover;
-    height: 500px;
+    background: url('images/vol0.jpg') no-repeat center center/cover;
+    height: 700px;
     position: relative;
     color: white;
+    background-position: center;
+background-size: cover;
 }
     .overlay {
         background-color: rgba(57, 153, 62, 0.5);
@@ -125,7 +133,7 @@
         text-align: center;
     }
     .overlay h1 {
-        color: #ff5f00;
+        color: #ff7f00;
         font-size: 40px;
         margin: 0;
     }
@@ -175,7 +183,7 @@
       
       .why-section h2 {
         font-size: 24px;
-        color: #006400;
+        color:#00561b;
         border-bottom: 3px solid #f27800;
         display: inline-block;
         padding-bottom: 8px;
@@ -193,7 +201,7 @@
       
       .why-text {
         flex: 1;
-        max-width: 500px;
+        max-width: 800px;
         font-size: 16px;
         text-align: justify;
       }
@@ -220,7 +228,7 @@
 
 h2 {
   text-align: center;
-  color: #006400;
+  color:#00561b;
   margin-top: 30px;
   border-bottom: 4px solid #f27800;
   display: inline-block;
@@ -252,7 +260,7 @@ h2 {
 .actions {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
 }
 
 .action-bloc {
@@ -297,7 +305,7 @@ body {
   }
   
   .valeurs-section h2 {
-    color: #006400;
+    color: #00561b;
     font-size: 2em;
     margin-bottom: 10px;
     position: relative;
@@ -318,7 +326,7 @@ body {
     background-color: 00561B;
     border-radius: 15px;
     padding: 20px;
-    width: 200px;
+    width: 250px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
   }
@@ -366,7 +374,7 @@ body {
   }
   
   .action-block {
-    border: 2px solid #006400;
+    border: 2px solid#00561b;
     padding: 15px;
     box-sizing: border-box;
   }
@@ -376,7 +384,7 @@ body {
   }
   
   .action-block.text.green {
-    background-color: #006400;
+    background-color:#00561b;
     color: white;
   }
   
@@ -384,18 +392,39 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    
   }
-  
+  .page-centree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;      /* 100% de la hauteur de l'écran */
+  text-align: center;
+}
   h3 {
     text-align: center;
     margin-top: 0;
-    color: black;
+    color: rgb(255, 255, 255);
   }
   
   @media (max-width: 768px) {
     .action-grid {
       grid-template-columns: 1fr;
     }
+    .plein-ecran {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;     /* centre horizontalement */
+  align-items: center;         /* centre verticalement */
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.plein-ecran h1 {
+  font-size: 3em;
+  color: #333;
+}
   }
   * {
     box-sizing: border-box;
@@ -417,7 +446,7 @@ body {
   .btn-top {
     background: linear-gradient(to right, #ffa500, #ff8000);
     color: white;
-    padding: 10px 30px;
+    padding: 10px 75px;
     border: none;
     border-radius: 20px;
     font-size: 16px;
@@ -464,9 +493,9 @@ body {
   }
   
   .btn-don {
-    background-color: #006400;
+    background-color: #00561b;
     color: white;
-    padding: 12px 25px;
+    padding: 12px 75px;
     font-size: 16px;
     border: none;
     border-radius: 20px;
@@ -493,6 +522,50 @@ body {
   .content h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: white; /* ← assure-toi que cette ligne existe */
+    color: white; 
   }
-  
+  .container {/* ← cote iage oval bi*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+.container h2 {
+       color: 00561B;
+  }
+.texte {
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+}
+
+.texte p {
+  margin-bottom: 15px;
+}
+
+.bulle {
+  background-color:#00561b;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 50% 50% 50% 0;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bulle h2 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+}
+
+.bulle p {
+  font-size: 18px;
+  margin: 0;
+}
