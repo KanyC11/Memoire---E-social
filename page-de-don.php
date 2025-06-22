@@ -64,7 +64,7 @@ $conn->close();
         <a href="index.html" class="menu">Accueil</a>
         <a href="page-a-propos.html" class="menu">A propos de nous</a>
         <a href="page-nos-projets.html" class="menu">Nos projets</a>
-        <a href="page-de-don.html" class="menu">Faire un don</a>
+        <a href="page-de-don.php" class="menu">Faire un don</a>
         <a href="page-demamde-aide.html" class="menu">Demande d'aide</a>
         <a href="page-connexion.html" class="menu">Connexion</a>
     </nav>
