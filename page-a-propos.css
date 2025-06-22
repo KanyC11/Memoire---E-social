@@ -3,6 +3,7 @@
     max-width: 100%;
     font-family: 'Times New Roman', Times, serif;
   }
+  
   body{
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -22,9 +23,9 @@
       text-decoration: none;
     font-weight: bold;
     font-family: Times New Roman, serif;
-    font-size: 22px;
+    font-size: 18px;
     color:#00561b;
-    margin-left:30px;
+    margin-left:10px;
 
   }
   .menu:hover{
@@ -117,7 +118,7 @@
   }
   .hero{
     background: url('images/vol0.jpg') no-repeat center center/cover;
-    height: 700px;
+    height: 570px;
     position: relative;
     color: white;
     background-position: center;
@@ -139,7 +140,7 @@ background-size: cover;
     }
     .overlay p {
         font-size: 18px;
-        color: #ddd;
+        color: #ffffff;
         margin-top: 10px;
     }
     .apropos {
@@ -158,22 +159,22 @@ background-size: cover;
         color: #000;
       }
       
-      .mission-section {
-        padding: 20px;
-      }
+      
       
       .mission h1 {
-        background-color: #f27800; 
-        color: rgb(0, 0, 0);
-        padding: 10px;
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 15px;
+        background-color: #ff7f00; 
+        margin-top: 50px;
+  color: #ffffff;
+  font-weight: bolder;
+  text-align: center;
+  font-style: italic;
+  font-size: 50px;
       }
       
       .mission p {
-        font-size: 16px;
-        text-align: justify;
+        font-size: 18px;
+        font-weight: 200;
+        text-align: center;
         margin: 0 10px 30px 10px;
       }
       
@@ -182,35 +183,53 @@ background-size: cover;
       }
       
       .why-section h2 {
-        font-size: 24px;
-        color:#00561b;
-        border-bottom: 3px solid #f27800;
-        display: inline-block;
-        padding-bottom: 8px;
+       margin-top: 20px;
+  color: #00561b;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #ff7f00;
+  font-style: italic;
+  font-size: 50px;
+      }
+      .why-text p{
+        
+        font-size: 18px;
+        font-weight: 200;
+        text-align: center;
+        margin: 0 10px 30px 10px;
+      }
+      .images{
+        background-color: #00561b;
+      }
+      .tailleimg img{
+        margin: 3px;
+        height: 210px;
+        width: 225px;
+        border-radius: 20px;
+        border: solid 2px #fff;
       }
       
-      .why-content {
+      .row {
         display: flex;
         flex-direction: row;       /* Texte à gauche, image à droite */
         align-items: center;       /* Alignement vertical */
         justify-content: center;   /* Centre l’ensemble horizontalement */
-        gap: 40px;                 /* Espace entre texte et image */
         padding: 20px;
         flex-wrap: wrap;           /* Pour adaptabilité sur petits écrans */
       }
       
-      .why-text {
-        flex: 1;
-        max-width: 800px;
-        font-size: 16px;
+      .colrow {
+         font-size: 18px;
+        font-weight: 200;
         text-align: justify;
       }
       
-      .why-image {
+      .img-vol12 {
         flex: 1;
-        max-width: 400px;
+        max-width: 100%;
         border: 4px solid #006400;
-        padding: 8px;
+        height: ;
         border-radius: 10px;
       }
       
@@ -227,12 +246,14 @@ background-size: cover;
 }
 
 h2 {
+  margin-top: 20px;
+  color: #00561b;
+  font-weight: bolder;
   text-align: center;
-  color:#00561b;
-  margin-top: 30px;
-  border-bottom: 4px solid #f27800;
-  display: inline-block;
-  padding-bottom: 8px;
+  text-decoration: underline;
+  text-decoration-color: #ff7f00;
+  font-style: italic;
+  font-size: 50px;
 }
 
 .valeurs-list {
@@ -252,13 +273,16 @@ h2 {
   text-align: center;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
+.valeur:hover{
+  background-color: #00561b;
+}
 
 .valeur h3 {
   color: #004d00;
 }
 
 .actions {
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px;
 }
@@ -280,9 +304,9 @@ h2 {
 .texte {
   flex: 1;
   background-color: white;
-  border: 2px solid #006400;
-  padding: 15px;
-  border-radius: 8px;
+  border: 4px solid #006400;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .texte.sang {
@@ -293,11 +317,7 @@ h2 {
 .texte h3 {
   margin-top: 0;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+
   
   .valeurs-section {
     text-align: center;
@@ -306,10 +326,10 @@ body {
   
   .valeurs-section h2 {
     color: #00561b;
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 50px;
     position: relative;
     display: inline-block;
+    margin-top: 0;
   }
   
  
@@ -319,14 +339,13 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   
   .valeur {
-    background-color: 00561B;
-    border-radius: 15px;
-    padding: 20px;
-    width: 250px;
+    background-color: #0c742d;
+    border-radius: 25px;
+    width: 25%;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
   }
@@ -341,11 +360,12 @@ body {
   .valeur h3 {
     margin: 15px 0 7px;
     font-size: 1.1em;
-    color: black; /* ✅ ajoute cette ligne */
+    color: rgb(255, 255, 255); 
   }
   
   .valeur p {
     font-size: 0.9em;
+    color: #fff;
     margin: 0;
   }
   body {
@@ -354,35 +374,36 @@ body {
     padding: 0;
   }
   
-  h2 {
+  .actions h2 {
     text-align: center;
-    color: #006400;
-    margin-top: 30px;
-    font-size: 2em;
+    color: #00561b;
+    font-size: 50px;
+    margin-top: -5px;
+    margin-bottom: 20px;
   }
   
-  .actions {
-    padding: 20px;
-  }
+  
   
   .action-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     max-width: 1000px;
     margin: auto;
   }
   
   .action-block {
-    border: 2px solid#00561b;
-    padding: 15px;
+    border: 4px solid#00561b;
     box-sizing: border-box;
   }
   
   .action-block.text {
     background-color: white;
   }
-  
+  .action-grid h3{
+    color: black;
+    font-size: 35px;
+    margin-top: 40px;
+  }
   .action-block.text.green {
     background-color:#00561b;
     color: white;
@@ -394,9 +415,17 @@ body {
     display: block;
     
   }
+  .btn{
+ display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+ 
   .page-centree {
   display: flex;
   justify-content: center;
+  font-size: 16px;
+  font-weight: 200;
   align-items: center;
   height: 30vh;      /* 100% de la hauteur de l'écran */
   text-align: center;
@@ -497,10 +526,14 @@ body {
     color: white;
     padding: 12px 75px;
     font-size: 16px;
+    text-decoration: none;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+  }
+  .btn-don:hover{
+    background-color: #ff7f00;
   }
   
   /* Responsive */
@@ -528,7 +561,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
+  max-width: 100%;
   margin: 50px auto;
   font-family: Arial, sans-serif;
 }
@@ -542,16 +575,18 @@ body {
 }
 
 .texte p {
-  margin-bottom: 15px;
+   font-size: 16px;
+        font-weight: 200;
+        text-align: center;
 }
 
 .bulle {
   background-color:#00561b;
   color: white;
-  padding: 40px 30px;
+  padding: 30px 30px;
   border-radius: 50% 50% 50% 0;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -561,7 +596,9 @@ body {
 }
 
 .bulle h2 {
-  font-size: 32px;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
   margin: 0 0 10px 0;
 }
 
