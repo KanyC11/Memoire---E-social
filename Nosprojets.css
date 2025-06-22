@@ -120,7 +120,7 @@ h4 {
 }
 
 .action-box {
-  border: 3px solid #ff7f00;
+  border: 7px solid #ff7f00;
   overflow: hidden;
   margin: 0 !important;
   background: white;
@@ -130,7 +130,7 @@ h4 {
 }
 
 .action-box1 {
-     border: 5px solid #00561b;
+     border: 7px solid #00561b;
   overflow: hidden;
   background-color: #00561b;
    margin: 0 !important;
@@ -165,7 +165,7 @@ h4 {
 .title-underline1 {
   height: 4px;
   background-color: #ff7f00;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 10px auto;
 }
 
 .title-underline {
@@ -290,7 +290,7 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive 
+/* Responsive */
 @media (max-width: 768px) {
   .nos-actions-title {
     font-size: 2.5rem !important;
@@ -310,4 +310,3 @@ footer {
     align-items: center !important;
   }
 }
-*/
