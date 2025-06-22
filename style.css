@@ -150,7 +150,7 @@ body{
      text-align: center;
     }
     .contenu-text{
-      max-width: 600px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .urgence-img{
@@ -175,23 +175,26 @@ body{
     .urgence-title::after{
       content: '';
       display: block;
-      width: 100%;
-      height: 4px;
+      width: 80%;
+      height: 3px;
       background-color: white;
       margin-top: 6px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .urgence-text p{
       color: white;
-      margin-bottom: 1.5rem;
+      margin: 0;
       line-height: 1.6;
+      width: 100%;
 
     }
     .urgence-btn{
       background: #ff7f00;
-      margin-top: 25px;
+      margin-top: 100px;
       color: white;
       border: none;
-      padding: 12px 30px;
+      padding: 6px 20px;
       border-radius: 35px;
       font-size: 16px;
       font-weight: bold;
@@ -223,6 +226,9 @@ body{
         text-align: center;
         font-weight: 800;
         margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+
       }
       .mission-title::after{
         content: '';
@@ -243,33 +249,39 @@ body{
     
      .bg-section{
      background-color: #00561b;
+     min-height: 200px;
+     }
+     .container-section{
+      background-color: #00561b;
+      min-height: 300px;
      }
      .soutien-title{
       font-size: 2.2rem;
+      margin-top: 80px;
       margin-bottom: 20px;
       font-weight: 900;
       color: #ffffff;
      }
      .soutien-text{
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       line-height: 2;
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      color: #ffffff;
+      margin:0 auto 2rem;
+      max-width: 1200px;
+      color: #ffff;
      }
      .btn-orange{
       background: #ff7700;
       color: white;
-      padding: 12px 30px;
+      padding: 4px 30px;
       font-size: 1.2rem;
       font-weight: bold;
-      border-radius: 30px;
+      border-radius: 20px;
       text-decoration: none;
       transition: background-color 0.3s;
-      width: 220px;
+      width: 240px;
       display: block;
-      margin: 0 auto 20px auto;
+      margin: 0 auto 1px auto;
+      margin-top: 5px;
       text-align: center;
      }
      .btn-orange:hover{
@@ -277,7 +289,7 @@ body{
       color: white;
      }
       <!-- A PROPOS DE NOUS-->
-      .container{
+      .container-propos{
         padding: 4rem 0;
         background: #f8f9fa;
         text-align: center;
@@ -294,18 +306,29 @@ body{
         margin-bottom: 20px;
         text-decoration: underline;
         text-decoration-color: #ff7f00;
+        text-underline-offset: 15px;
+      
       }
       .about-text{
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         color: #333;
         line-height: 1.8;
-        max-width: 800px;
+        width: 100%;
+        max-width: none;
         margin: 0 auto;
+      }
+      .btn-success{
+        background: #00561b;
+      color: white;
+      padding: 4px 30px; 
+      text-align: center;
+      margin-top: 10px;
+      border-radius: 15px;
       }
        <!-- NOS ACTIONS -- >
        .section-titre{
         color: #ff7f00;
-        font-weight: bold;
+        font-weight: 900;
         font-size: 2rem;
         text-align: center;
         text-decoration: underline;
@@ -314,32 +337,59 @@ body{
         margin: 40px 0;
        }
        .action-card{
-        border-radius: 30px;
+        border-radius: 100px;
+        border: 1px solid #00561b;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         overflow: hidden;
         background-color: white;
-        height: 100%;
+        width: 100%;
+        max-width: 600px;
+        height: 600px;
         display: flex;
         flex-direction: column;
+        flex: 0 0 calc(50% - 20px);
+         margin-left: 40px;
+         margin-bottom: 40px;
+       }
+       .action-card h5{
+        font-weight: bold;
+        font-size: 2.8rem;
+        width: 100%;
+        margin-bottom: 4px;
+       }
+       .action-card p{
+        margin-top: 0px;
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
        }
        .action-card:hover{
         transform: translateY(-5px);
         transition: transform 0.3s ease , box-shadow 0.3s ease ;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
        }
+       .title{
+        font-weight: 700;
+        margin-bottom: 5px;
+       }
+       .text{
+        margin-top: 10px;
+       }
        .action-img{
         width: 100%;
-        height: 300px;
+        height: 400px;
         object-fit: cover;
        }
        .action-body{
-        background-color: #006400;
+        background-color: #00561b;
         color: white;
         padding: 15px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        text-align: center;
        }
        .action-title{
         font-weight: bold;
@@ -367,7 +417,7 @@ body{
           text-align: center;
         }
         .don-overlay{
-           background-color: rgba(255, 255, 255,0.8);
+
            margin: auto;
            border: 2px solid #007a33;
            border-radius: 15px;
