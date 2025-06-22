@@ -30,7 +30,7 @@ body{
 }
  .banner {
      position: relative;
-     height: 90vh;
+     height: 120vh;
      background: url('images/banner.jpg')center/cover no-repeat;
      color: white;
      text-align: center;
@@ -51,12 +51,18 @@ body{
       bottom: 5%;
       z-index: 2;
       text-align: center;
-      top: 50%; left: 10%;
+      top: 60%; left: 10%;
       transform: translateY(-50%);
      
     }
     .banner-content h1{
       color: #ff7f00;
+    }
+    .subtitle{
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: white;
+      text-align: center;
     }
     .stat-box{
       background-color: white;
@@ -70,39 +76,82 @@ body{
       text-align: center;
     
     }
+    .stat-box p{
+      font-size: 1.8rem;
+      margin: 0;
+      color: #00561b;
+    }
     .stat-box:hover{
       transform: translateY(-5px);
       box-shadow: 0 4px 12 px rgba(0, 0, 0, 0.2);
     }
     .step-1{
-      margin-top: 150px;
+      margin-top: 300px;
     }
     .step-2{
-      margin-top: 150px;
+      margin-top: 300px;
     }
     .step-3{
-      margin-top: 150px;
+      margin-top: 300px;
     }
  <!-- DONS URGENTS-->
     section{
       scroll-margin-top: 80px;
     }
+    *dons-urgents{
+      text-align: center;
+      padding: 50px 0;
+    }
     .section-title{
-      color: #2d5a27;
+      color: #00561b;
+      font-weight: bold;
       font-size: 2.5rem;
       text-align: center;
-      margin-bottom: 2rem;
-      text-decoration: underline;
+      border-bottom:4px solid #ff7f00 ;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 30px;
+      margin: 40px auto;
+      text-decoration: none;
       text-decoration-color: #ff7f00;
+      position: relative;
+    }
+    .section-text1{
+      font-size: 25px;
+      line-height: 1.7;
+      text-align: center;
+      color: #222;
+      width: 100%;
     }
     .urgence-container{
-      background-color: #2d5a27;
+     
+      color: white;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
       grid-template-columns: 1fr 1fr;
       display: grid;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 3rem;
+      align-items: stretch;
+      gap: 0;
       margin-top: 3rem;
+    }
+    .urgence-text, .urgence-img{
+      flex:1 1 50% ;
+    }
+    .urgence-text{
+     background-color: hsla(120, 40%, 41%, 0.479);
+     color: white;
+     padding: 30px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+    }
+    .contenu-text{
+      max-width: 600px;
+      margin: 0 auto;
     }
     .urgence-img{
      flex: 1 1 40%;
@@ -114,10 +163,22 @@ body{
     .urgence-title{
       color: #ff7f00;
       font-weight: bold;
-      font-size: 1.3rem;
-      text-decoration: underline;
+      font-size: 30px;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      text-decoration: none;
       text-decoration-color: white;
       text-underline-offset: 4px;
+    }
+    .urgence-title::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      margin-top: 6px;
     }
     .urgence-text p{
       color: white;
@@ -126,12 +187,13 @@ body{
 
     }
     .urgence-btn{
-      background: #ff8c42;
+      background: #ff7f00;
+      margin-top: 25px;
       color: white;
       border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 25px;
-      font-size: 1rem;
+      padding: 12px 30px;
+      border-radius: 35px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s;
@@ -146,42 +208,72 @@ body{
         align-items: center;
       }
       #mission img{
-        max-width: 100%;
+        border: 4px solid #00561b;
+        border-radius: 25px;
+        padding: 4px;
         height: auto;
-        border-radius: 12px;
+        max-width: 100%;
       }
       .mission-title{
         font-size: 2rem;
         color: #00561b;
         text-decoration: underline;
         text-decoration-color: #ff7f00;
+        text-underline-offset: 8px;
         text-align: center;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      .mission-title::after{
+        content: '';
+        display: block;
+        width: 60%;
+        height: 3px;
+        margin: 6px auto 0 auto;
+        border-radius: 2px;
       }
       .mission-text{
-        font-size: 1rem;
-        line-height: 1.7;
+        font-size: 1.3rem;
+        line-height: 1.9;
+        max-width: 700px;
+        margin:0 auto;
         color: #444;
       }
      <!-- POURQUOI NOUS SOUTENIR -- >
-     .container{
-      padding: 3rem 0;
-      background: #2d5a27;
-      color: white;
-      text-align: center;
+    
+     .bg-section{
+     background-color: #00561b;
      }
-     .container h3{
-      font-size: 2rem;
-      margin-bottom: 1rem;
+     .soutien-title{
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 900;
+      color: #ffffff;
      }
-     .container p{
-      font-size: 1.1rem;
+     .soutien-text{
+      font-size: 1.4rem;
+      line-height: 2;
       margin-bottom: 2rem;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
+      color: #ffffff;
      }
      .btn-orange{
       background: #ff7700;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      width: 220px;
+      display: block;
+      margin: 0 auto 20px auto;
+      text-align: center;
+     }
+     .btn-orange:hover{
+      background-color: #ff7f00;
       color: white;
      }
       <!-- A PROPOS DE NOUS-->
@@ -198,8 +290,17 @@ body{
         color: #ff7f00;
         margin-top: 2rem;
         font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
         text-decoration: underline;
         text-decoration-color: #ff7f00;
+      }
+      .about-text{
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto;
       }
        <!-- NOS ACTIONS -- >
        .section-titre{
@@ -220,6 +321,11 @@ body{
         height: 100%;
         display: flex;
         flex-direction: column;
+       }
+       .action-card:hover{
+        transform: translateY(-5px);
+        transition: transform 0.3s ease , box-shadow 0.3s ease ;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
        }
        .action-img{
         width: 100%;
@@ -243,45 +349,50 @@ body{
        .action-desc{
         font-size: 0.95rem;
         color: #e6e6e6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
        }
         <!-- DEMANDE DE DON -- >
         .don-section{
-          position: absolute;
-          background-image: url('images/aide.jpg')center/cover no-repeat;
+          background-image: url('images/aide.jpg');
+          position: relative;
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
-          min-height: 500px;
-          padding: 40px 20px;
-          display: flex;
-          justify-content: center;
+          max-width:100%;
+          padding: 60px 20px;
           text-align: center;
         }
-        .don-box{
-           background-color: rgba(255, 255, 255,0.92);
+        .don-overlay{
+           background-color: rgba(255, 255, 255,0.8);
+           margin: auto;
            border: 2px solid #007a33;
-           border-radius: 20px;
-           max-width: 700px;
+           border-radius: 15px;
+           max-width: 800px;
            padding: 40px 30px;
-           width: 100%;
+           color: #00561b;
            text-align: center;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .don-box h2{
-          color: #007a33;
+        .don-overlay h3{
+          font-size: 24px;
           font-weight: bold;
           margin-bottom: 20px;
         }
-        .don-box p{
-          color: #444;
-          font-size: 1.1rem;
+        .don-overlay p{
+          font-size: 16px;
+          line-height: 1.8;
           margin-bottom: 30px;
         }
         .don-btn{
           background-color: #00561b;
           border: none;
           color: white;
-          padding: 12px 24px;
+          padding: 10px 25px;
+          font-weight: bold;
           font-size: 1rem;
           border-radius: 8px;
           text-decoration: none;
@@ -289,25 +400,29 @@ body{
         }
         .don-btn:hover{
           background-color: #e06600;
+          color: #fff;
         }
        <!-- REMERCIEMENT -- >
        .merci-section{
-        padding: 60px 20px;
+        width: 100%;
+        padding: 40px 20px;
         background-color: #ffffd7;
         text-align: center;
        }
        .merci-title{
         color: #ff7700;
-        font-size: 2rem;
+        font-size: 24px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         text-align: center;
        }
        .merci-text{
-        font-size: 1.1rem;
+        font-size: 18px;
         color: #333;
-        max-width: 800px;
-        margin: 0 auto 40px auto;
+        max-width: 900px;
+        margin: 0 auto ;
+        line-height: 1.8;
+        padding: 0 20px;
         text-align: center;
        }
        .merci-images{
@@ -326,54 +441,15 @@ body{
 
 
   <!-- PARTENAIRE -- >
- .collab-title{
-  color: #00561b;
+ .text-orane{
+  color: #ff7f00;
   font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: #00561b;
-  text-underline-offset: 6px;
-  margin-bottom: 40px;
  }
- .collab-logo{
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  background: white;
-  border-radius: 10px;
-  padding: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
+ .underline-white{
+  width: 140px;
+  height: 3px;
+  background-color: white;
  }
-.collab-logo:hover{
-  transform: scale(1.05);
-}
-.collab-box{
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-.collab-section{
-  background-color: #f9f9f9;
-  padding: 60px 0;
-}
-.logo-bar{
- display: flex;
- flex-wrap: nowrap;
- justify-content: center;
- gap: 20px;
- overflow-x: auto;
- padding: 10px 20px;
-}
-@media (max-width: 768px) {
-  .collab-logo{
-    width: 80px;
-    height: 60px;
-  }
-}
   <!-- FOOTER -- >  
 .logo-footer{
     width: 100px;
@@ -423,13 +499,20 @@ footer {
 }
 
 .logo-footer {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 0 20px 0;
+  margin-left:25px ;
+
 }
+
 .texte-footer {
   font-size: 14px;
   line-height: 1.6;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .footer-col h4 {
