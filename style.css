@@ -303,7 +303,7 @@ body{
         margin-top: 2rem;
         font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-decoration: underline;
         text-decoration-color: #ff7f00;
         text-underline-offset: 15px;
@@ -316,6 +316,7 @@ body{
         width: 100%;
         max-width: none;
         margin: 0 auto;
+        margin-top: 5px;
       }
       .btn-success{
         background: #00561b;
@@ -337,7 +338,7 @@ body{
         margin: 40px 0;
        }
        .action-card{
-        border-radius: 100px;
+        border-radius: 90px;
         border: 1px solid #00561b;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         overflow: hidden;
@@ -378,7 +379,7 @@ body{
        }
        .action-img{
         width: 100%;
-        height: 400px;
+        height: 380px;
         object-fit: cover;
        }
        .action-body{
@@ -413,18 +414,21 @@ body{
           background-position: center;
           background-repeat: no-repeat;
           max-width:100%;
-          padding: 60px 20px;
+          padding: 40px 20px;
           text-align: center;
+          min-height: 400px;
         }
         .don-overlay{
-
+           background-color: rgba(255, 255, 255,0.3);
            margin: auto;
-           border: 2px solid #007a33;
-           border-radius: 15px;
+           border: 4px solid #007a33;
+           border-radius: 70px;
            max-width: 800px;
-           padding: 40px 30px;
+           padding: 40px;
+           margin-top: 150px;
            color: #00561b;
            text-align: center;
+           justify-content: center;
            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .don-overlay h3{
@@ -433,12 +437,16 @@ body{
           margin-bottom: 20px;
         }
         .don-overlay p{
-          font-size: 16px;
-          line-height: 1.8;
+          font-size: 20px;
+          line-height: 2.2;
           margin-bottom: 30px;
+          color: #555;
+          width: 600%;
+          margin-left: auto;
+          margin-right: auto;
         }
         .don-btn{
-          background-color: #00561b;
+          background-color: #ff7f00;
           border: none;
           color: white;
           padding: 10px 25px;
@@ -465,6 +473,7 @@ body{
         font-weight: bold;
         margin-bottom: 30px;
         text-align: center;
+        margin-top: 630px;
        }
        .merci-text{
         font-size: 18px;
@@ -490,16 +499,9 @@ body{
        }
 
 
-  <!-- PARTENAIRE -- >
- .text-orane{
-  color: #ff7f00;
-  font-weight: bold;
- }
- .underline-white{
-  width: 140px;
-  height: 3px;
-  background-color: white;
- }
+  
+
+
   <!-- FOOTER -- >  
 .logo-footer{
     width: 100px;
