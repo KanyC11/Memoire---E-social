@@ -14,14 +14,14 @@ body{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 50px;
 
 }
 .menu{
     text-decoration: none;
     font-weight: bold;
     font-family: Times New Roman, serif;
-    font-size: 20px;
+    font-size: 22px;
     color:#00561b;
 }
 .menu:hover{
@@ -31,6 +31,7 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 100px;
+    margin-left: 150px;
 }
 .col{
     margin-left: 30px;
