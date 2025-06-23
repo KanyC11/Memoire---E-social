@@ -23,9 +23,9 @@
       text-decoration: none;
     font-weight: bold;
     font-family: Times New Roman, serif;
-    font-size: 18px;
+    font-size: 100%;
     color:#00561b;
-    margin-left:10px;
+    margin:1%;
 
   }
   .menu:hover{
@@ -203,9 +203,8 @@ background-size: cover;
         background-color: #00561b;
       }
       .tailleimg img{
-        margin: 3px;
-        height: 210px;
-        width: 225px;
+        margin: 1%;
+        width: 100%;
         border-radius: 20px;
         border: solid 2px #fff;
       }
@@ -220,7 +219,7 @@ background-size: cover;
       }
       
       .colrow {
-         font-size: 18px;
+         font-size: 100%;
         font-weight: 200;
         text-align: justify;
       }
@@ -269,7 +268,7 @@ h2 {
   background-color: #719B7B;
   padding: 15px;
   border-radius: 10px;
-  width: 200px;
+  width: 100%;
   text-align: center;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
@@ -387,7 +386,7 @@ h2 {
   .action-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
+    max-width: 100%;
     margin: auto;
   }
   
