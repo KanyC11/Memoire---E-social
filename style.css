@@ -112,9 +112,11 @@ body{
       padding-bottom: 5px;
       margin-bottom: 30px;
       margin: 40px auto;
+      margin-top: 70px;
       text-decoration: none;
       text-decoration-color: #ff7f00;
       position: relative;
+      left: 350px;
     }
     .section-text1{
       font-size: 25px;
@@ -170,7 +172,8 @@ body{
       width: 300px;
       text-decoration: none;
       text-decoration-color: white;
-      text-underline-offset: 4px;
+      text-underline-offset: 7px;
+      text-decoration-thickness: 2px;
     }
     .urgence-title::after{
       content: '';
@@ -210,13 +213,7 @@ body{
       #mission.row{
         align-items: center;
       }
-      #mission img{
-        border: 4px solid #00561b;
-        border-radius: 25px;
-        padding: 4px;
-        height: auto;
-        max-width: 100%;
-      }
+     
       .mission-title{
         font-size: 2rem;
         color: #00561b;
@@ -244,6 +241,11 @@ body{
         max-width: 700px;
         margin:0 auto;
         color: #444;
+      }
+      .mission-img{
+        border: 4px solid #00561b;
+        border-radius: 25px;
+        padding: 0;
       }
      <!-- POURQUOI NOUS SOUTENIR -- >
     
@@ -408,36 +410,43 @@ body{
        }
         <!-- DEMANDE DE DON -- >
         .don-section{
-         height: 400px;
-         overflow: hidden;
          position: relative;
+         height: 500px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+
         }
         .don-background{
+          position: absolute;
+          top: 4830px;
+          left: 0;
           width: 100%;
-          height: 100%;
+          height: 900px;
           object-fit: cover;
           filter: brightness(0.7);
-          position: absolute;
-          top: 0;
-          left: 0;
           z-index: 1;
         }
         .don-overlay{
           position: relative;
           z-index: 2;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: rgba(255, 255, 255, 0.4);
           padding: 30px;
           border-radius: 60px;
           border: 3px solid #00561b;
           max-width: 700px;
           margin: 0 auto;
-          margin-top: 50px;
+          margin-top: 240px;
+          text-align: center;
+          
         
         }
         .don-overlay h3{
           font-size: 35px;
           font-weight: bold;
           margin-bottom: 20px;
+          color: #00561b;
         }
         .don-overlay p{
           font-size: 20px;
