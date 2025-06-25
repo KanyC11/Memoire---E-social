@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Nosprojets.css">
+    <script src="Nosprojet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
     <link rel="icon" type="image/jpg" href="images/favicon_Plan de travail 1.jpeg.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Page Nos projet</title>
@@ -29,10 +37,10 @@
     <div class="title-underline"></div>
     
     <!-- Texte d'introduction -->
-    <div class="intro-text px-4 text-center">
-        <p><strong> Transformez votre générosité en miracles du quotidien avec Don du Cœur
+    <div class="intro-text">
+        <p>Transformez votre générosité en miracles du quotidien avec Don du Cœur
         Chaque projet que nous menons répond à un besoin pressant au sein de notre communauté. Que ce soit pour améliorer la santé, favoriser l'éducation ou restaurer la dignité, votre soutien se transforme en actions concrètes : un médicament qui guérit, un vêtement qui apporte chaleur, une formation qui ouvre des horizons.
-        Découvrez nos initiatives et choisissez celle qui résonne le plus avec votre cœur. Chaque geste compte, et chaque don a le potentiel de changer des vies. Ensemble, créons un impact positif !</strong></p>
+        Découvrez nos initiatives et choisissez celle qui résonne le plus avec votre cœur. Chaque geste compte, et chaque don a le potentiel de changer des vies. Ensemble, créons un impact positif !</p>
 </div>
 
     <div class="row g-4">
@@ -84,7 +92,7 @@
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
                 <img src="images/consultation gratuit.jpeg" class="card-img-top" alt="Consultation gratuit"style="border-radius: 45px 45px 0 0;">
                 <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                   <h3 class="green-title text-center">Consultation gratuit</h3>
+                   <h3 class="green-title text-center">Consultation médicale gratuite</h3>
                     <p class="card-text text-center">Nous offrons une journée de consultation gratuite pour permettre à tous d'accéder à des soins médicaux de qualité, sans barrière financière, et de promouvoir le bien-être de notre communauté.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>                </div>
@@ -111,6 +119,50 @@
            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
                 <img src="images/evenement.webp" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
                 <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                    <h3 class="green-title text-center">Construisons ensemble la Maison des Enfants </h3>
+                    <p class="card-text text-center">Nous avons besoin de votre cœur et de votre générosité pour réaliser un rêve : construire une Maison des Enfants chaleureuse et accueillante pour les enfants défavorisés de notre communauté.</p>
+                    <div class="text-center">
+                    <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- troisieme ligne -->
+    <div class="row g-4 mt-4">
+        <!-- Projet 7 -->
+        <div class="col-md-4">
+            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
+                <img src="images/consultation gratuit.jpeg" class="card-img-top" alt="Consultation gratuit"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                 <h3 class="green-title text-center">Construction de puits dans les zones lointaines</h3>
+<p class="card-text text-center">Nous construisons des puits d'eau potable dans les régions les plus reculées pour garantir un accès permanent à cette ressource vitale. Un puits, une communauté sauvée. Chaque communauté mérite une source d'eau sûre et accessible près de chez elle.</p>
+<div class="text-center">
+                    <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Projet 8 -->
+        <div class="col-md-4">
+            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
+                <img src="images/istockphoto-1372606877-612x612.webp" class="card-img-top" alt="Formations"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                    <h3 class="green-title text-center">Distribution de médicaments essentiels</h3>
+<p class="card-text text-center">Nous fournissons des médicaments de base non périmés aux communautés isolées pour assurer les premiers soins et traiter les affections courantes. Notre stock inclut des antalgiques comme le paracétamol, des antiseptiques et tout le matériel de premiers secours nécessaire.</p>
+<div class="text-center">
+                    <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 9 -->
+        <div class="col-md-4">
+           <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
+                <img src="images/evenement.webp" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
                     <h3 class="green-title text-center">Événements solidaires</h3>
                     <p class="card-text text-center">Nous avons besoin de votre cœur et de votre générosité pour réaliser un rêve : construire une Maison des Enfants chaleureuse et accueillante pour les enfants défavorisés de notre communauté.</p>
                     <div class="text-center">
@@ -131,7 +183,7 @@
     <div class="title-underline1"></div>
     
     <!-- Texte d'introduction -->
-    <div class="intro-text px-4 text-center">
+    <div class="intro-text">
          <p> <strong>Découvrez comment nous transformons la solidarité en actions concrètes 
         Chaque don, chaque geste, chaque sourire partagé illumine la vie de ceux qui en ont le plus besoin. Ensemble, nous ne donnons pas seulement de l'argent ou des objets - nous offrons de l'espoir, de la dignité et un avenir radieux. Rejoignez notre communauté de héros du quotidien et découvrez le pouvoir extraordinaire de la solidarité !</strong></p>
     </div>
@@ -262,6 +314,107 @@
 </section>
 
 
+<h1 class="carte">Carte des Beneficiaire dans la région de Thiès</h1>
+
+<div id="map">
+
+<!-- Légende -->
+<div id="map-legend" class="leaflet-control">
+  <p><img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" width="24"> Formation professionnelle</p>
+  <p><img src="https://cdn-icons-png.flaticon.com/512/2892/2892820.png" width="24"> Éducation des enfants</p>
+  <p><img src="https://cdn-icons-png.flaticon.com/512/7281/7281763.png" width="24"> Eau potable</p>
+</div>
+</div>
+
+
+
+
+    <!-- Section Témoignages -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <h1 class="titre">Témoignages de nos bénéficiaires</h1>
+            <div class="title-underline"></div>
+            
+            <div class="intro-text">
+                <p>Chaque témoignage raconte une histoire de solidarité, d'espoir et de transformation. 
+                Grâce à votre générosité, nous changeons des vies au quotidien. Découvrez l'impact concret de vos dons à travers les mots de ceux qui en ont bénéficié.</p>
+            </div>
+            
+            <div class="row g-4">
+                 <!-- Témoignage 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="rim">
+                        <div class="testimonial-header">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mamadou Fall" class="testimonial-avatar">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="testimonial-text">"La formation que j'ai reçue grâce à Don du Cœur m'a permis de trouver un emploi et de subvenir aux besoins de ma famille. Cette opportunité a changé ma vie."</p>
+                            <div class="client-name">Mamadou Fall</div>
+                            <div class="client-position">Bénéficiaire formation, Dakar</div>
+                        </div>
+                    </div>
+                </div>
+               
+       
+
+                <!-- Témoignage 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card rim">
+                        <div class="testimonial-header">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mamadou Fall" class="testimonial-avatar">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="testimonial-text">"La formation que j'ai reçue grâce à Don du Cœur m'a permis de trouver un emploi et de subvenir aux besoins de ma famille. Cette opportunité a changé ma vie."</p>
+                            <div class="client-name">Mamadou Fall</div>
+                            <div class="client-position">Bénéficiaire formation, Dakar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card rim">
+                        <div class="testimonial-header">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Fatou Sow" class="testimonial-avatar">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="testimonial-text">"Mes enfants ont pu aller à l'école avec dignité grâce aux kits scolaires reçus. Don du Cœur redonne espoir aux familles comme la nôtre."</p>
+                            <div class="client-name">Fatou Sow</div>
+                            <div class="client-position">Mère de 4 enfants, Rufisque</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
 
 
 
@@ -292,7 +445,7 @@
             </div>
             <div class="col">
                 <h4>CONTACTS</h4>
-                <p class="p-footer">+221 33 900 00 00</p>
+                <p class="p-footer">+221 78 450 27 78</p>
                 <p class="p-footer">donducoeur@gmail.com</p>
                 <h4>Suivez nous sur</h4>
             <div class="socials">
