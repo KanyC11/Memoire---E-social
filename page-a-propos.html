@@ -1,234 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="page-a-propos.css">
-  <link rel="icon" type="image/jpg" href="images/favicon_Plan de travail 1.jpg">
-  <title>Page a propos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="page-a-propos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="images/favicon_Plan de travail 1.jpg">
+    <title>À propos de nous - Don du Cœur</title>
 </head>
 
 <body>
-  <nav class="entete">
-    <img src="images/don-du-coeur.jpg" alt="" class="logo">
-    <a href="index.html" class="menu">Accueil</a>
-    <a href="page-a-propos.html" class="menu">A propos de nous</a>
-    <a href="page-nos-projets.html" class="menu">Nos projets</a>
-    <a href="page-de-don.php" class="menu">Faire un don</a>
-    <a href="page-demamde-aide.html" class="menu">Demande d'aide</a>
-    <a href="page-connexion.html" class="menu">Connexion</a>
-  </nav>
+    <nav class="entete">
+        <img src="images/don-du-coeur.jpg" alt="Logo Don du Cœur" class="logo">
 
-  <section class="hero">
-    <div class="overlay">
-      <h1 style="font-size: 65px;">À propos de nous</h1>
-      <p style="font-size: 30px;">Une plateforme solidaire au service du changement</p>
-    </div>
-  </section>
-  <div class="why-section">
-    <h2>Notre Engagement </h2>
-    <div class="row">
-      <div class="col colrow">
-        <p> Fondée en 2025, Don du Cœur est une fondation née d’un élan de solidarité et d’un profond désir de justice
-          sociale. Consciente des inégalités qui persistent dans notre société, elle s’est donnée pour mission
-          d’apporter une aide concrète et durable aux personnes les plus vulnérables.
-          Notre engagement repose sur des valeurs fortes : l'entraide, la dignité humaine et l’espoir. Nous croyons
-          qu’un simple geste peut tout changer, et que chaque individu mérite d’être soutenu dans les moments
-          difficiles. À travers diverses actions de terrain, nous semons les graines d’un avenir plus équitable, où
-          personne n’est laissé pour compte. </p>
-      </div>
-      <div class="col">
-        <img src="images/vol12.png" alt="Photo bénévoles avec cartons de dons" class="img-vol12">
-      </div>
-    </div>
-  </div>
-  </section>
-  <strong>
-    <section>
-      <div class="container">
-        <div class="texte">
-          <h2 style="font-size: 35px;">Des bénévoles engagés pour un impact durable</h2>
-          <p>Au cœur de notre action, ce sont les bénévoles qui insufflent l’énergie et la chaleur humaine qui
-            caractérisent Don du Cœur. Grâce à leur dévouement, leur disponibilité et leur générosité, nous sommes en
-            mesure d’intervenir efficacement, en adaptant notre aide aux besoins spécifiques de chaque situation. À
-            leurs côtés, des partenaires institutionnels et privés nous apportent leur soutien logistique, financier et
-            moral.</p>
+        <!-- Bouton hamburger -->
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+
+        <!-- Menu principal -->
+        <div class="menu-items" id="menu">
+            <a href="index.html" class="menu">Accueil</a>
+            <a href="page_a_propos.html" class="menu">À propos de nous</a>
+            <a href="Nosprojets.html" class="menu">Nos projets</a>
+            <a href="page_de_don.html" class="menu">Faire un don</a>
+            <a href="page-demande-aide.php" class="menu">Demande d'aide</a>
+            <a href="page-connexion.html" class="menu">Connexion</a>
         </div>
-        <div class="bulle">
-          <h2 >+85</h2>
-          <p>Projets realiser</p>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <h1 class="display-4 titrebanner">À propos de nous</h1>
+            <p class="lead">Une plateforme solidaire au service du changement.</p>
         </div>
-      </div>
+    </div>
 
+    <!-- Notre Engagement -->
+    <div class="container my-5">
+        <h1 class="text-center titre">Notre Engagement</h1>
+        <div class="row align-items-center g-4">
+            <!-- Texte -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <p class="missonpar">
+                    Fondée en 2025, Don du Cœur est une fondation née d'un élan de solidarité et d'un profond désir de
+                    justice sociale. Consciente des inégalités qui persistent dans notre société, elle s'est donnée pour
+                    mission d'apporter une aide concrète et durable aux personnes les plus vulnérables. Notre engagement
+                    repose sur des valeurs fortes : l'entraide, la dignité humaine et l'espoir. Nous croyons qu'un
+                    simple geste peut tout changer, et que chaque individu mérite d'être soutenu dans les moments
+                    difficiles. À travers diverses actions de terrain, nous semons les graines d'un avenir plus
+                    équitable, où personne n'est laissé pour compte.
+                </p>
+            </div>
 
-
-      </p>
-    </section>
-    <section class="mission-section">
-      <div class="mission">
-
-        <h1>Notre mission</h1>
-        <p>      
-           Notre mission est claire et ambitieuse : favoriser l’engagement citoyen et amplifier l’impact social
-              grâce aux outils numériques. <br>Dans un monde en constante évolution, où la technologie occupe une place
-              centrale, nous croyons qu’elle peut devenir un levier puissant au service de la solidarité. C’est pourquoi
-              nous avons choisi de mettre le digital au cœur de notre action. 
-
-           Nous souhaitons rendre le don plus accessible à tous, en quelques clics, depuis n’importe quel endroit.
-              Grâce à une plateforme simple, rapide et sécurisée, chacun peut contribuer à une cause qui lui tient à
-              cœur, sans contrainte. <br>Notre objectif : que la solidarité ne soit plus freinée par des barrières
-              techniques ou logistiques. 
-           </p>
-  </div>
-<div class="row images">
-          <div class="col tailleimg"><img src="images/image.png" alt="" ></div>
-          <div class="col tailleimg"><img src="images/set.jpg" alt=""></div>
-          <div class="col tailleimg"><img src="images/don.png" alt=""></div>
-          <div class="col tailleimg"><img src="images/images.png" alt=""></div>
+            <!-- Image -->
+            <div class="col-lg-6 col-md-12 text-center">
+                <img src="images/vol3.jpg" alt="Don du Cœur" class="img-fluid rounded shadow mydon">
+            </div>
         </div>
-  <div class="why-section">
-    <h2>Pourquoi nous existons ?</h2>
-    <div class="why-content">
-      <div class="why-text">
-        
-          <p >Parce que trop souvent, les initiatives solidaires manquent de moyens, de
-            visibilité ou de soutien.
-            Parce que beaucoup de personnes veulent aider mais ne savent pas par où commencer.
-            Parce qu’il est temps d’unir générosité, technologie et impact.Nos interventions sont variées : distribution
-            alimentaire, aide vestimentaire, soutien scolaire, accompagnement psychologique, accès à la santé, et bien
-            plus encore. Chaque projet est pensé avec soin, dans une logique de proximité et d’écoute, afin de garantir
-            un impact réel et durable. Nous ne faisons pas que répondre à l’urgence ; nous construisons des solutions
-            pour demain.</p>
-      </div> 
-
-  </div>
-  </section>
-  <section class="valeurs-section">
-    <h2>Nos valeurs</h2>
-
-    <div class="row valeurs-container">
-      <div class="col valeur">
-        <img src="images/solidarite.jpg" alt="Solidarité">
-        <h3 style="font-size: 25px;"><strong>Solidarité</strong></h3>
-        <p>Placer l’humain au cœur de chaque action.</p>
-      </div>
-
-      <div class="col valeur">
-        <img src="images/transparence.jpg" alt="Transparence">
-        <h3 style="font-size: 25px;"><strong>Transparence</strong></h3>
-        <p >Chaque don est suivi et tracé en toute clarté.</p>
-      </div>
-
-      <div class="col valeur">
-        <img src="images/engagement.jpg" alt="Engagement">
-        <h3 style="font-size: 25px;"><strong>Engagement</strong></h3>
-        <p >Nous agissons pour un monde meilleur.</p>
-      </div>
-
-      <div class="col valeur">
-        <img src="images/Innovation.jpg" alt="Innovation">
-        <h3 style="font-size: 25px;"><strong>Innovation</strong></h3>
-        <p >Nous utilisons les outils numériques.</p>
-      </div>
     </div>
-  </section>
-  <section class="actions">
-    <div style="text-align: center;">
-        <h2>Nos actions marquantes</h2>
+
+    <!-- Bénévoles -->
+    <div class="container my-5">
+        <div class="row align-items-center g-4">
+            <!-- Colonne texte -->
+            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                <div class="texte">
+                    <h2 class="bene">Des bénévoles engagés pour un impact durable</h2>
+                    <p class="missonpar">
+                        Au cœur de notre action, ce sont les bénévoles qui insufflent l'énergie et la chaleur humaine qui
+                        caractérisent Don du Cœur. Grâce à leur dévouement, leur disponibilité et leur générosité, nous
+                        sommes en mesure d'intervenir efficacement, en adaptant notre aide aux besoins spécifiques de chaque
+                        situation. À leurs côtés, des partenaires institutionnels et privés nous apportent leur soutien logistique,
+                        financier et moral.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Colonne bulle -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <div class="bulle">
+                    <h2>+85</h2>
+                    <p>Projets réalisés</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="action-grid">
 
-      <div class="action-block text ">
-        <h3 ><em><strong>Collecte de fond</strong></em></h3>
-        <p class="page-centree">
-       Grâce à la mobilisation des bonnes volontes, nous avons réussi à collecter des fonds destinés à soutenir les femmes en situation de précarité. Cette aide financière leur a permis de couvrir des besoins essentiels tels que la santé, l’alimentation, ou encore l’éducation de leurs enfants. </p>
-      </div>
-      <div class="action-block image">
-        <img src="images/vol4.jpg" alt="Collecte d'argent">
-      </div>
-
-      <div class="action-block image">
-        <img src="images/vol6.jpg" alt="Don de sang">
-      </div>
-      <div class="action-block text green">
-        <h3 style="color: white;"><em><strong>Organisation de dons de sang</strong></em></h3>
-        <p class="page-centree" >En partenariat avec plusieurs structures sanitaires locales, nous avons mis en place des campagnes régulières de don de sang. Ces initiatives ont permis de mobiliser de nombreux volontaires et de collecter des centaines de poches de sang, essentielles pour les hôpitaux et les patients dans le besoin.</p>
-      </div>
-
-      <div class="action-block text">
-        <h3 ><em><strong>Distribution de ndogou </strong></em>
-        </h3>
-        <p class="page-centree">Durant ce mois, nous avons mis en place une opération de distribution 
-          de repas à destination des familles démunies.Ce geste symbolique incarne 
-          l’esprit de partage et de fraternité qui anime notre engagement.Chaque 
-          repas distribué représente un moment de réconfort et un pas vers plus 
-          de dignité.</p>
-      </div>
-      <div class="action-block image">
-        <img src="images/vol5.jpg" alt="Distribution de repas">
-      </div>
-
-    </div>
-  </section>
-  <div class="btn ">
-    <a href="page_nos_projet.html" class="btn-don">Voir plus</a>
-  </div>
-
-  <div class="banner">
-    <div class="overla">
-      <div class="content">
-        <h1 style="font-size: 40px;">Ensemble, faisons la différence</h1>
-        <p style="font-size: 20px;">
-          Chez Don du Cœur, chaque initiative est portée par l’amour du prochain, le sens du partage et la conviction
-          que chacun peut contribuer à un monde meilleur.<br>
-          Rejoignez-nous, soutenez nos actions <br>
-          un petit geste de votre part peut devenir un grand changement pour quelqu’un d’autre.
+    <!-- Mission -->
+    <div class="container my-5">
+        <h1 class="missotitre titre text-center">Notre mission</h1>
+        <p class="text-center missonpar">
+            Notre mission est claire et ambitieuse : favoriser l'engagement citoyen et amplifier l'impact social grâce aux outils numériques.
+            Dans un monde en constante évolution, où la technologie occupe une place centrale, nous croyons qu'elle peut
+            devenir un levier puissant au service de la solidarité. C'est pourquoi nous avons choisi de mettre le
+            digital au cœur de notre action. Nous souhaitons rendre le don plus accessible à tous, en quelques clics,
+            depuis n'importe quel endroit. Grâce à une plateforme simple, rapide et sécurisée, chacun peut contribuer à
+            une cause qui lui tient à cœur, sans contrainte.
+            Notre objectif : que la solidarité ne soit plus freinée par des barrières techniques ou logistiques.
         </p>
-        <a href="page_de_don.php" class="btn-don">Faire un don</a>
-      </div>
     </div>
-  </div>
 
-
-
-  <footer>
-
-    <div class="row foot" style="background-color: #ff7f00;height: 200px;">
-      <div class="col">
-        <img src="images/don-du-coeur.jpg" alt="" class="logo-footer">
-        <p class="texte-footer">Notre equipe s’engage à vous apporter leurs plus grand soutien chaque demande
-          sera traitée avec attention, confidentialité et humanité.</p>
-      </div>
-      <div class="col">
-        <h4>LIENS UTILES</h4>
-        <ul>
-          <li><a href="index.html" class="footer-menu">Accueil</a></li>
-          <li><a href="page-a-propos.html" class="footer-menu">A propos de nous</a></li>
-          <li><a href="page-nos-projets.html" class="footer-menu">Nos projets</a></li>
-          <li><a href="page-de-don.html" class="footer-menu">Faire un don</a></li>
-          <li><a href="page-demamde-aide.html" class="footer-menu">Demande d'aide</a></li>
-          <li><a href="page-connexion.html" class="footer-menu">Connexion</a></li>
-        </ul>
-
-      </div>
-
-      <div class="col">
-        <h4>CONTACTS</h4>
-        <p class="p-footer">+221 33 900 00 00</p>
-        <p class="p-footer">donducoeur@gmail.com</p>
-        <h4>Suivez nous sur</h4>
-        <img src="images/icone-sociaux_Plan de travail 1.jpg" alt="">
-      </div>
+    <!-- Images -->
+    <div class="images">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 col-12 tailleimg">
+                    <img src="images/image.png" alt="Action solidaire" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 tailleimg">
+                    <img src="images/set.jpg" alt="Set Setal" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 tailleimg">
+                    <img src="images/don.png" alt="Don" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 tailleimg">
+                    <img src="images/images.png" alt="Solidarité" class="img-fluid">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="footer-bottom" style="background-color: #ff7f00;">
-      <div class="col text-center">
-        <p class="text-center">© 2025 Don du Coeur. Tous droits réservés.</p>
-      </div>
-  </footer>
 
+    <!-- Pourquoi nous existons -->
+    <div class="container my-5">
+        <h1 class="titre text-center">Pourquoi nous existons ?</h1>
+        <p class="text-center missonpar">
+            Parce que trop souvent, les initiatives solidaires manquent de moyens, de visibilité ou de soutien. 
+            Parce que beaucoup de personnes veulent aider mais ne savent pas par où commencer. 
+            Parce qu'il est temps d'unir générosité, technologie et impact. Nos interventions sont variées : 
+            distribution alimentaire, aide vestimentaire, soutien scolaire, accompagnement psychologique, 
+            accès à la santé, et bien plus encore. Chaque projet est pensé avec soin, dans une logique de proximité 
+            et d'écoute, afin de garantir un impact réel et durable. Nous ne faisons pas que répondre à l'urgence ; 
+            nous construisons des solutions pour demain.
+        </p>
+    </div>
 
+    <!-- Valeurs -->
+    <div class="container my-5">
+        <h1 class="titre text-center">Nos valeurs</h1>
+        <div class="valeur">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="bloc">
+                        <img src="images/solidarite.jpg" alt="Solidarité" class="img-fluid">
+                        <h3><strong>Solidarité</strong></h3>
+                        <p class="blocpara">Placer l'humain au cœur de chaque action.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="bloc">
+                        <img src="images/transparence.jpg" alt="Transparence" class="img-fluid">
+                        <h3><strong>Transparence</strong></h3>
+                        <p class="blocpara">Chaque don est suivi et tracé en toute clarté.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="bloc">
+                        <img src="images/engagement.jpg" alt="Engagement" class="img-fluid">
+                        <h3><strong>Engagement</strong></h3>
+                        <p class="blocpara">Nous agissons pour un monde meilleur.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="bloc">
+                        <img src="images/Innovation.jpg" alt="Innovation" class="img-fluid">
+                        <h3><strong>Innovation</strong></h3>
+                        <p class="blocpara">Nous utilisons les outils numériques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nos actions marquantes -->
+    <div class="container my-5">
+        <h1 class="titre text-center">Nos actions marquantes</h1>
+        <div class="action-grid">
+            <div class="action-block text">
+                <h3><em><strong>Collecte de fond</strong></em></h3>
+                <p class="page-centree">
+                    Grâce à la mobilisation des bonnes volontés, nous avons réussi à collecter des fonds destinés à
+                    soutenir les femmes en situation de précarité. Cette aide financière leur a permis de couvrir
+                    des besoins essentiels tels que la santé, l'alimentation, ou encore l'éducation de leurs
+                    enfants.
+                </p>
+            </div>
+            <div class="action-block image">
+                <img src="images/fond_Plan de travail 1.jpg" alt="Collecte d'argent" class="img-fluid">
+            </div>
+
+            <div class="action-block image">
+                <img src="images/sang_Plan de travail 1.jpg" alt="Don de sang" class="img-fluid">
+            </div>
+            <div class="action-block text green">
+                <h3><em><strong>Organisation de dons de sang</strong></em></h3>
+                <p class="page-centree">
+                    En partenariat avec plusieurs structures sanitaires locales, nous avons mis en place des campagnes 
+                    régulières de don de sang. Ces initiatives ont permis de mobiliser de nombreux volontaires et de 
+                    collecter des centaines de poches de sang, essentielles pour les hôpitaux et les patients dans le besoin.
+                </p>
+            </div>
+
+            <div class="action-block text">
+                <h3><em><strong>Distribution de ndogou</strong></em></h3>
+                <p class="page-centree">
+                    Durant ce mois, nous avons mis en place une opération de distribution de repas à destination des familles démunies.
+                    Ce geste symbolique incarne l'esprit de partage et de fraternité qui anime notre engagement.
+                    Chaque repas distribué représente un moment de réconfort et un pas vers plus de dignité.
+                </p>
+            </div>
+            <div class="action-block image">
+                <img src="images/ndogou_Plan de travail 1.jpg" alt="Distribution de repas" class="img-fluid">
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="nosprojet.html" class="btn-don">En savoir plus</a>
+        </div>
+    </div>
+
+    <!-- Banner faire un don -->
+    <div class="banners">
+        <div class="overla">
+            <div class="content">
+                <h1>Ensemble, faisons la différence</h1>
+                <p>
+                    Chez Don du Cœur, chaque initiative est portée par l'amour du prochain, le sens du partage et la conviction
+                    que chacun peut contribuer à un monde meilleur.<br>
+                    Rejoignez-nous, soutenez nos actions <br>
+                    un petit geste de votre part peut devenir un grand changement pour quelqu'un d'autre.
+                </p>
+                <a href="page_de_don.php" class="btn-don">Faire un don</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-orange text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-12 text-center text-md-start">
+                    <img src="images/don-du-coeur.jpeg" alt="Logo Don du Cœur" class="logo-footer mb-3">
+                    <p class="texte-footer">
+                        Notre équipe s'engage à vous apporter leur plus grand soutien. Chaque demande
+                        sera traitée avec attention, confidentialité et humanité.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 text-center text-md-start">
+                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Liens utiles</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-menu text-white text-decoration-none">Accueil</a></li>
+                        <li><a href="page_a_propos.html" class="footer-menu text-white text-decoration-none">À propos de nous</a></li>
+                        <li><a href="page-nos-projets.html" class="footer-menu text-white text-decoration-none">Nos projets</a></li>
+                        <li><a href="page_de_don.html" class="footer-menu text-white text-decoration-none">Faire un don</a></li>
+                        <li><a href="page-demande-aide.html" class="footer-menu text-white text-decoration-none">Demande d'aide</a></li>
+                        <li><a href="page-connexion.html" class="footer-menu text-white text-decoration-none">Connexion</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 col-12 text-center text-md-start">
+                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Contacts</h4>
+                    <p class="mb-1">📞 +221 33 900 00 00</p>
+                    <p class="mb-3">📧 donducoeur@gmail.com</p>
+                    <h5>Suivez-nous sur</h5>
+                    <div class="socials d-flex justify-content-center justify-content-md-start gap-3 mt-2">
+                        <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+
+        // Fermer le menu mobile quand on clique sur un lien
+        document.querySelectorAll('.menu').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById("menu").classList.remove("active");
+            });
+        });
+
+        // Fermer le menu mobile quand on clique en dehors
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById("menu");
+            const toggle = document.querySelector(".menu-toggle");
+            
+            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 
 </html>
