@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Nosprojets.css">
+     <link rel="stylesheet" href="css/a_propos.css">
     <script src="Nosprojet.js"></script>
+    <script defer src="map.js"></script>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="images/favicon_Plan de travail 1.jpeg.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Page Nos projet</title>
@@ -21,14 +21,21 @@
 
 <body>
     <nav class="entete">
-        <img src="images/don-du-coeur.jpeg.jpeg" alt="" class="logo">
-        <a href="index.html" class="menu">Accueil</a>
-        <a href="page-a-propos.html" class="menu">A propos de nous</a>
-        <a href="page-nos-projets.html" class="menu">Nos projets</a>
-        <a href="page-de-don.html" class="menu">Faire un don</a>
-        <a href="page-demamde-aide.html" class="menu">Demande d'aide</a>
-        <a href="page-connexion.html" class="menu">Connexion</a>
-    </nav>
+        <img src="images/don-du-coeur.jpeg.jpeg" alt="Logo Don du Cœur" class="logo">
+
+        <!-- Bouton hamburger -->
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+
+        <!-- Menu principal -->
+        <div class="menu-items" id="menu">
+            <a href="index.html" class="menu">Accueil</a>
+            <a href="page_a_propos.html" class="menu">À propos de nous</a>
+            <a href="Nosprojets.html" class="menu">Nos projets</a>
+            <a href="page-de-don.php" class="menu">Faire un don</a>
+            <a href="page-demande-aide.php" class="menu">Demande d'aide</a>
+            <a href="page-connexion.html" class="menu">Connexion</a>
+        </div>
+    </nav>
 
      <section class="projets py-5">
 <div class="container-fluid py-5">
@@ -45,24 +52,34 @@
 
     <div class="row g-4">
       <!-- Projet 1 -->
+
+      
 <div class="col-md-4 justify-content-center">
     <div class="card project-card h-100 border-0"style="font-size:18px;">
         <img src="images/payement ordonnance.jpeg" class="card-img-top" alt="Payement ordonnance">
-        <div class="card-body text-center">
-            <h3 class="green-title">Payement ordonnance une femme dans le besoin</h3>
-            <p class="card-text">Nous nous engageons à aider les personnes en difficulté en prenant en charge le paiement de leurs ordonnances médicales, car la santé ne devrait jamais être un luxe.</p>
+        <div class="card-body">
+           <h3 class="green-title text-center">Payement ordonnance une femme dans le besoin</h3>
+
+<p class="mira"><strong>Type de dons:</strong> Argents</p>
+<p class="mira"><strong>Montant visé:</strong> 120.000 fcfa</p>
+<hr>
+
+            <p class="card-text">Une mère de trois enfants, a un besoin urgent de médicaments essentiels. Votre contribution permettra de financer une ordonnance vitale et d’apporter un véritable soulagement. Parce que la santé ne doit jamais être un privilège, ensemble, nous pouvons faire la différence dans la vie de cette femme et de sa famille.Chaque geste compte pour sauver cette femme.</p>
             <a href="page-de-don.html" class="btn btn-warning">Je soutiens ce projet</a>
         </div>
     </div>
 </div>
-
         <!-- Projet 2 -->
         <div class="col-md-4">
            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
                 <img src="images/collecte vetement.jpeg" class="card-img-top" alt="collecte vetement"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                <div class="card-body">
                     <h3 class="green-title text-center">Collecte de vêtements pour les daaras</h3>
-                    <p class="card-text text-center">Nous organisons cette collecte pour soutenir les daaras, afin d'assurer que chaque enfant ait accès à des vêtements appropriés.un vêtement propre peut transformer leur perception.</p>
+                     <p class="mira"><strong>Type de dons:</strong> vêtements garcon</p>
+            <p class="mira"><strong>Zone de collecte:</strong>Thies</p>
+            <hr>
+                    <p class="card-text text-center">Lors de notre visite dans plusieurs daaras de Thiès, nous avons été touchés par les conditions de vie des enfants talibés.                        Beaucoup d'entre eux manquent cruellement de vêtements décents, surtout en période de froid ou de pluie.
+À travers cette collecte, nous souhaitons leur offrir des habits propres et adaptés, pour préserver leur santé et leur dignité.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -74,9 +91,12 @@
         <div class="col-md-4">
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
                 <img src="images/construction.jpeg" class="card-img-top" alt=" Construction d’une espace de jeux"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                <div class="card-body">
                     <h3 class="green-title text-center">Construction d’une espace de jeux  </h3>
-                    <p class="card-text text-center">Nous projetons de construire un espace de jeux sécurisé pour offrir aux enfants un lieu d'apprentissage et de développement.Chaque enfant mérite un endroit où rêver et grandir.</p>
+                    <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Secteurs ciblés:</strong>Thies/Diakhao</p>
+            <hr>
+                    <p class="card-text text-center">Nous projetons de créer un espace de jeux sécurisé où les enfants pourront s’amuser, apprendre et se développer en toute sécurité. Parce que chaque enfant mérite un lieu où grandir, rêver et s’épanouir pleinement. Votre soutien, qu’il soit financier ou matériel, contribuera à offrir cet espace de bonheur et de découvertes.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -90,10 +110,13 @@
         <!-- Projet 4 -->
         <div class="col-md-4">
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
-                <img src="images/consultation gratuit.jpeg" class="card-img-top" alt="Consultation gratuit"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                   <h3 class="green-title text-center">Consultation médicale gratuite</h3>
-                    <p class="card-text text-center">Nous offrons une journée de consultation gratuite pour permettre à tous d'accéder à des soins médicaux de qualité, sans barrière financière, et de promouvoir le bien-être de notre communauté.</p>
+                <img src="images/télécharger.webp" class="card-img-top" alt="Consultation gratuit"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body">
+                   <h3 class="green-title text-center">Construction de puits dans les zones lointaines</h3>
+                   <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Zones d’intervention:</strong>Fandene/tassete</p>
+            <hr>
+                    <p class="card-text text-center">Nous construisons des puits d’eau potable dans les zones les plus reculées pour garantir un accès constant à une ressource vitale. Offrir de l’eau propre, c’est améliorer la santé, faciliter le quotidien et redonner espoir aux communautés isolées. Chaque puits construit est un pas vers un avenir meilleur.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>                </div>
             </div>
@@ -103,10 +126,13 @@
         <!-- Projet 5 -->
         <div class="col-md-4">
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
-                <img src="images/istockphoto-1372606877-612x612.webp" class="card-img-top" alt="Formations"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                    <h3 class="green-title text-center">Formations gratuites</h3>
-                    <p class="card-text text-center">La connaissance est un droit, pas un privilège. C'est pourquoi<strong> Don du coeur </strong> s'engage à offrir des formations gratuites à des jeunes défavorisés afin de construire un avenir meilleur.</p>
+                <img src="images/man-working-as-pharmacist.jpg" class="card-img-top" alt="Formations"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body">
+                    <h3 class="green-title text-center">Distribution de médicaments essentiels</h3>
+                    <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Zone d’action:</strong>Thies/Diakhao</p>
+            <hr>
+                    <p class="card-text text-center">Nous distribuons des médicaments de première nécessité aux communautés isolées, afin d’assurer les premiers soins et soulager les maux courants. Notre stock comprend des antalgiques comme le paracétamol, des antiseptiques et tout le matériel indispensable pour répondre rapidement aux besoins de santé.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -117,10 +143,13 @@
         <!-- Projet 6 -->
         <div class="col-md-4">
            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
-                <img src="images/evenement.webp" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
+                <img src="images/child-5213589_1280.jpg" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body">
                     <h3 class="green-title text-center">Construisons ensemble la Maison des Enfants </h3>
-                    <p class="card-text text-center">Nous avons besoin de votre cœur et de votre générosité pour réaliser un rêve : construire une Maison des Enfants chaleureuse et accueillante pour les enfants défavorisés de notre communauté.</p>
+                    <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Territoire d’action:</strong>Thies/Thiénaba</p>
+            <hr>
+                    <p class="card-text text-center">Nous avons besoin de votre cœur et de votre générosité pour bâtir une Maison des Enfants chaleureuse, un refuge sûr pour les plus vulnérables de notre communauté. Ensemble, offrons-leur un lieu d’espoir, de joie et de protection. Chaque contribution, quelle qu’elle soit, rapproche ce rêve de la réalité.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -135,9 +164,14 @@
         <div class="col-md-4">
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
                 <img src="images/consultation gratuit.jpeg" class="card-img-top" alt="Consultation gratuit"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                 <h3 class="green-title text-center">Construction de puits dans les zones lointaines</h3>
-<p class="card-text text-center">Nous construisons des puits d'eau potable dans les régions les plus reculées pour garantir un accès permanent à cette ressource vitale. Un puits, une communauté sauvée. Chaque communauté mérite une source d'eau sûre et accessible près de chez elle.</p>
+                <div class="card-body">
+                 <h3 class="green-title text-center">Journee de consultation gratuite</h3>
+                  <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Zone de collecte:</strong>Thies/Thiénaba</p>
+            <hr>
+<p class="card-text text-center">Dans le cadre de notre engagement pour la santé accessible à tous, nous avons organisé une journée de consultation gratuite à Thiès et Thiénaba.
+Cette action permet à de nombreuses familles, souvent éloignées des structures médicales, de bénéficier de soins essentiels sans frais.
+Chaque consultation est un pas vers une meilleure santé et un quotidien allégé pour ces communautés.</p>
 <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>                </div>
             </div>
@@ -147,10 +181,13 @@
         <!-- Projet 8 -->
         <div class="col-md-4">
             <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
-                <img src="images/istockphoto-1372606877-612x612.webp" class="card-img-top" alt="Formations"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                    <h3 class="green-title text-center">Distribution de médicaments essentiels</h3>
-<p class="card-text text-center">Nous fournissons des médicaments de base non périmés aux communautés isolées pour assurer les premiers soins et traiter les affections courantes. Notre stock inclut des antalgiques comme le paracétamol, des antiseptiques et tout le matériel de premiers secours nécessaire.</p>
+                <img src="images/action6.jpeg" class="card-img-top" alt="Formations"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body">
+                    <h3 class="green-title text-center"> Journée Set Setal au cœur de SAPCO</h3>
+                      <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Zone d’action:</strong>Thies/SAPCO</p>
+            <hr>
+<p class="card-text text-center">Après le succès de notre première journée Set Setal organisée au poste de santé de Diakhao, qui a rassemblé habitants et bénévoles autour d’un même élan de propreté et de fraternité, nous sommes heureux d’annoncer la préparation d’une nouvelle édition au quartier SAPCO. Cette initiative vise à mobiliser la communauté locale pour rendre notre quartier plus propre, plus sain, et plus accueillant.</p>
 <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -161,10 +198,14 @@
         <!-- Projet 9 -->
         <div class="col-md-4">
            <div class="card project-card h-100 border-0" style="border-radius: 15px; overflow: hidden;font-size: 18px;">
-                <img src="images/evenement.webp" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
-                <div class="card-body"style="background-color: #00561b;border-radius: 0 0 45px 45px;">
-                    <h3 class="green-title text-center">Événements solidaires</h3>
-                    <p class="card-text text-center">Nous avons besoin de votre cœur et de votre générosité pour réaliser un rêve : construire une Maison des Enfants chaleureuse et accueillante pour les enfants défavorisés de notre communauté.</p>
+                <img src="images/view-kids-practicing-health-wellness-activity.jpg" class="card-img-top" alt="Événement solidaire"style="border-radius: 45px 45px 0 0;">
+                <div class="card-body">
+                    <h3 class="green-title text-center">Foire agricole : semer l’espoir chez les jeunes</h3>
+                     <p class="mira"><strong>Type de dons:</strong>Argents, Materiels</p>
+            <p class="mira"><strong>Localisation :</strong>Thies ville</p>
+            <hr>
+                    <p class="card-text text-center">En collaboration avec la Mairie de Thiès, nous avons organisé une foire agricole destinée à susciter l’intérêt des jeunes pour l’agriculture et à promouvoir le développement durable dans la région.
+Cet événement a permis de présenter des innovations, d’offrir des formations et de créer des opportunités concrètes afin que la jeunesse puisse s’engager pleinement dans ce secteur stratégique.</p>
                     <div class="text-center">
                     <a href="page-de-don.html" class="btn btn-warning"style="background-color: #ff7f00; border-color: #ff7f00; color: white;">je soutiens ce projet</a>
                 </div>
@@ -198,10 +239,9 @@
                        </div>
                     <div class="col-md-6">
                         <div class="action-content">
-                            <h3 class="green-title"style="padding-top:30px">Collecte de fond</h3>
+                            <h3 class="green-title"style="padding-top:20px">Collecte de fond</h3>
                             <p class="green-text text-center"style="font-size: 20px; line-height: 1.8;">
-                                Grâce à la mobilisation des bonnes volontes, nous avons réussi à collecter des fonds destinés à soutenir les femmes en situation de précarité. Cette aide financière leur a permis de couvrir des besoins essentiels tels que la santé, l’alimentation, ou encore l’éducation de leurs enfants. 
-                                </p>
+                               Grâce à la mobilisation des bonnes volontés, nous avons réussi à collecter des fonds pour soutenir plusieurs personnes en situation de précarité. Cette aide leur a permis de faire face à des besoins urgents : acheter des médicaments, nourrir leurs enfants ou encore payer les frais de scolarité. Chaque contribution a eu un impact réel, apportant du réconfort et redonnant dignité et espoir.</p>
 </div>
                     </div>
                 </div>
@@ -216,10 +256,9 @@
                 <div class="row g-0">
                     <div class="col-md-6">
                         <div class="green-section h-100 d-flex flex-column justify-content-center">
-                            <h3 class="green-title">Organisation de dons de sang</h3>
+                            <h3 class="green-title"style="padding-top:20px">Organisation de dons de sang</h3>
                             <p class="green-text"style="font-size: 20px; line-height: 1.8;">
-                              En partenariat avec plusieurs structures sanitaires locales, nous avons mis en place des campagnes régulières de don de sang. Ces initiatives ont permis de mobiliser de nombreux volontaires et de collecter des centaines de poches de sang, essentielles pour les hôpitaux et les patients dans le besoin.
-                              </p>
+                             En collaboration avec les structures sanitaires locales, nous avons organisé une grande campagne de don de sang au poste de santé de Diakhao. Grâce à l’engagement des volontaires, plusieurs centaines de poches ont été collectées, offrant une véritable bouffée d’espoir aux patients en attente de transfusion. Ce geste simple mais vital a permis de sauver des vies et de renforcer les réserves locales en sang.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -229,7 +268,7 @@
             </div>
         </div>
     </div>
-
+</div>
      <!-- Action 3 : collect de kits -->
     <div class="row mb-0">
         <div class="col-12">
@@ -240,36 +279,35 @@
                     </div>
                     <div class="col-md-6">
                         <div class="action-content">
-                            <h3 class="green-title"style="padding-top:30px">Collecte de kits scolaire</h3>
+                            <h3 class="green-title"style="padding-top:20px">Collecte de kits scolaire</h3>
                             <p class="action-text text-center"style="font-size: 20px; line-height: 1.8;">
-                               Afin de favoriser l’égalité des chances dès le plus jeune âge, nous avons lancé une collecte solidaire de kits scolaires à destination des enfants issus de milieux défavorisés. Grâce à la générosité de nos donateurs et à l’engagement de nos bénévoles, des centaines d’élèves ont pu recevoir des fournitures complètes leur permettant d’aborder l’année scolaire. 
-                               </p>
-                        </div>
+                              Dans le but de soutenir les enfants issus de familles modestes, nous avons organisé une grande collecte solidaire de fournitures scolaires. Grâce à l’élan de générosité de nos donateurs et à l’implication de nos bénévoles, des centaines d’élèves ont reçu des kits complets : cahiers, stylos, sacs et autres essentiels. Un petit geste pour certains, mais un grand pas pour ces enfants.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
+       
+ 
     <!-- Action 4 : Don de ndogou -->
-      <div class="row mb-0">
+     <div class="row mb-0">
         <div class="col-12">
             <div class="action-box1">
                 <div class="row g-0">
                     <div class="col-md-6">
                         <div class="green-section h-100 d-flex flex-column justify-content-center">
-                            <h3 class="green-title">Distribution de ndogou pendant le Ramadan</h3>
+                            <h3 class="green-title"style="padding-top:20px">Distribution de ndogou pendant le Ramadan</h3>
                             <p class="green-text"style="font-size: 20px; line-height: 1.8;">
-                               Durant ce mois, nous avons mis en place une opération de distribution de repas à destination des familles démunies.Ce geste symbolique incarne l’esprit de partage et de fraternité qui anime notre engagement.Chaque repas distribué représente un moment de réconfort et un pas vers plus de dignité.
-                               </p>
+                              À la tombée du jour, dans les rues de Thiès, nos équipes ont sillonné les quartiers pour distribuer des repas de ndogou aux passants, aux travailleurs fatigués, et à ceux qui n’avaient pas de table où rompre le jeûne.
+Dans chaque sachet remis, il y avait bien plus que de la nourriture : un sourire, un regard bienveillant, un geste d’humanité.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <img src="images/Don de ndogou.jpeg" class="taille-uniforme" alt="Don de ndogou">
-                    </div>
+                  
                 </div>
             </div>
         </div>
+        </div>
+    </div>
     </div>
      <!-- Action 5 : Collecte de denrés alimentaires -->
     <div class="row mb-0">
@@ -281,14 +319,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="action-content">
-                            <h3 class="green-title"style="padding-top:30px">Collecte de ravitaillement</h3>
+                            <h3 class="green-title"style="padding-top:20px">Collecte de ravitaillement</h3>
                             <p class="action-text"style="font-size: 20px; line-height: 1.8;">
-                              Grâce au soutien indéfectible de nos généreux donateurs et à la mobilisation constante de nos équipes bénévoles, nous avons pu mettre en place une vaste opération de distribution de denrées alimentaires. Cette initiative a permis à de nombreuses familles en situation de précarité de subvenir à leurs besoins essentiels.
-                              </p>
+                              Grâce à la générosité de nos donateurs et à l’implication constante de nos bénévoles, nous avons mené avec succès une vaste opération de distribution de denrées alimentaires. Cette action a permis à de nombreuses familles en situation de précarité d’accéder à des ressources alimentaires essentielles. Nous remercions chaleureusement tous ceux qui ont contribué à cette belle réussite.</p>
+                        </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
  <!-- Action 6 : Organisation d’une journee Set Setal -->
@@ -298,10 +335,9 @@
                 <div class="row g-0">
                     <div class="col-md-6">
                         <div class="green-section h-100 d-flex flex-column justify-content-center">
-                            <h3 class="green-title">Organisation d’une journee Set Setal</h3>
+                            <h3 class="green-title"style="padding-top:20px">Organisation d’une journee Set Setal</h3>
                             <p class="green-text"style="font-size: 20px; line-height: 1.8;">
-                               Nous avons organisé une journée de nettoyage communautaire pour rendre notre quartier plus propre et agréable. Merci à tous les bénévoles pour leur engagement et leur énergie.Cette initiative a permis de rassembler les habitants autour d'un objectif commun renforçant ainsi les liens sociaux. 
-                               </p>
+                              Nous avons organisé une journée Set Setal a Diakhao, rassemblant habitants et bénévoles autour d’un même objectif : rendre notre environnement plus propre et plus sain. Cette belle mobilisation communautaire a renforcé les liens entre les participants tout en contribuant à améliorer la qualité de vie dans le quartier. Merci à tous ceux qui ont participé et soutenu cette initiative.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -314,15 +350,16 @@
 </section>
 
 
-<h1 class="carte">Carte des Beneficiaire dans la région de Thiès</h1>
+<h1 class="carte">Carte des zones ciblées et témoignages dans la région de Thiès</h1>
 
-<div id="map">
+<div id="map" style="height: 600px; width: 100%;">
+
 
 <!-- Légende -->
 <div id="map-legend" class="leaflet-control">
-  <p><img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" width="24"> Formation professionnelle</p>
+ <!-- <p><img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" width="24"> Formation professionnelle</p>
   <p><img src="https://cdn-icons-png.flaticon.com/512/2892/2892820.png" width="24"> Éducation des enfants</p>
-  <p><img src="https://cdn-icons-png.flaticon.com/512/7281/7281763.png" width="24"> Eau potable</p>
+  <p><img src="https://cdn-icons-png.flaticon.com/512/7281/7281763.png" width="24"> Eau potable</p>-->
 </div>
 </div>
 
@@ -332,7 +369,7 @@
     <!-- Section Témoignages -->
     <section class="py-5">
         <div class="container-fluid">
-            <h1 class="titre">Témoignages de nos bénéficiaires</h1>
+            <h1 class="section-title mt-5">Témoignages de nos bénéficiaires</h1>
             <div class="title-underline"></div>
             
             <div class="intro-text">
@@ -356,9 +393,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="testimonial-text">"La formation que j'ai reçue grâce à Don du Cœur m'a permis de trouver un emploi et de subvenir aux besoins de ma famille. Cette opportunité a changé ma vie."</p>
-                            <div class="client-name">Mamadou Fall</div>
-                            <div class="client-position">Bénéficiaire formation, Dakar</div>
+                            <p class="testimonial-text"style="font-size: 20px;padding: 20px;">Lorsque j’ai eu besoin d’une transfusion sanguine, je ne savais pas comment j’allais m’en sortir. Heureusement, grâce à l’engagement de Don du Cœur et la mobilisation des donneurs, j’ai reçu le sang dont j’avais besoin pour guérir. Ce soutien a été une véritable bouffée d’oxygène dans une période difficile. Je suis profondément reconnaissant envers tous ceux qui ont contribué à sauver ma vie.</p>
+                            <div class="client-name">Assane Seck</div>
+                            <div class="client-position">Bénéficiaire d’une transfusion sanguine, Ndiaganiao</div>
                         </div>
                     </div>
                 </div>
@@ -370,7 +407,7 @@
                     <div class="card rim">
                         <div class="testimonial-header">
                             <i class="fas fa-quote-left quote-icon"></i>
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mamadou Fall" class="testimonial-avatar">
+                            <img src="images/man-613601_1280.jpg" alt="Mamadou Fall" class="testimonial-avatar">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -380,9 +417,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="testimonial-text">"La formation que j'ai reçue grâce à Don du Cœur m'a permis de trouver un emploi et de subvenir aux besoins de ma famille. Cette opportunité a changé ma vie."</p>
+                            <p class="testimonial-text"style="font-size: 20px;">Don du Cœur nous a apporté un soutien précieux avec la distribution de denrées alimentaires. Cette aide a vraiment fait la différence pour ma famille, en nous offrant un peu de répit et beaucoup d’espoir dans ces moments difficiles.Ce geste de solidarité a été une véritable bouffée d’espoir, redonnant force et courage à toute ma famille.Je suis profondément reconnaissant pour cette aide qui a fait une réelle différence dans nos vies. </p>
                             <div class="client-name">Mamadou Fall</div>
-                            <div class="client-position">Bénéficiaire formation, Dakar</div>
+                            <div class="client-position"> Bénéficiaire de l’aide alimentaire , Bambilor</div>
                         </div>
                     </div>
                 </div>
@@ -392,7 +429,7 @@
                     <div class="card rim">
                         <div class="testimonial-header">
                             <i class="fas fa-quote-left quote-icon"></i>
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Fatou Sow" class="testimonial-avatar">
+                            <img src="images/photo.1566224.jpeg" alt="Fatou Sow" class="testimonial-avatar">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -402,9 +439,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="testimonial-text">"Mes enfants ont pu aller à l'école avec dignité grâce aux kits scolaires reçus. Don du Cœur redonne espoir aux familles comme la nôtre."</p>
+                            <p class="testimonial-text"style="font-size: 20px;">Grâce à Don du Cœur, mes enfants ont pu commencer l’année scolaire avec tout ce dont ils avaient besoin : des cahiers, des stylos, des sacs… Des choses simples, mais qui pour nous représentent tellement. Voir leurs sourires et leur fierté à l’idée d’aller à l’école avec dignité m’a profondément touchée. Cela m’a aussi redonné de l’espoir, car je sais qu’avec un peu d’aide, même dans les moments difficiles, un avenir meilleur est possible pour eux.</p>
                             <div class="client-name">Fatou Sow</div>
-                            <div class="client-position">Mère de 4 enfants, Rufisque</div>
+                            <div class="client-position">Mère de 4 enfants, Tienaba</div>
                         </div>
                     </div>
                 </div>
@@ -413,7 +450,89 @@
 
 
 
+ <!-- Section témoignages donateurs -->
+            <h1 class="section-title mt-5">Témoignages de nos donateurs</h1>
+            <div class="title-underline"></div>
+            
+            <div class="row g-4 mt-4">
+                <!-- Témoignage donateur 1 -->
+                <div class="col-lg-6">
+                    <div class="card testimonial-card">
+                        <div class="testimonial-header">
+                            <i class="fas fa-heart quote-icon" style="color: #ff7f00;"></i>
+                            <img src="images/danatrice.jpeg" alt="Marie Cissé" class="testimonial-avatar">
+                        </div>
+                        <div class="card-body">
+                            <p class="testimonial-text"style="font-size: 20px;">Soutenir Don du Cœur, c’est pour moi bien plus qu’un simple don — c’est une vraie source de joie et de fierté. Savoir que mon aide fait une différence concrète dans la vie de ceux qui en ont besoin me réchauffe le cœur chaque jour. Merci à toute l’équipe pour ce travail exceptionnel, continuez à illuminer tant de vies</p>
+                            <div class="client-name">Marie Cissé</div>
+                            <div class="client-position">Donatrice régulière</div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Témoignage donateur 2 -->
+                <div class="col-lg-6">
+                    <div class="card testimonial-card">
+                        <div class="testimonial-header">
+                            <i class="fas fa-heart quote-icon" style="color: #ff7f00;"></i>
+                            <img src="images/donateur.jpeg" alt="Pierre Sarr" class="testimonial-avatar">
+                        </div>
+                        <div class="card-body">
+                            <p class="testimonial-text"style="font-size: 20px;"> Ce qui m’a vraiment touché chez Don du Cœur, c’est leur transparence totale et le suivi rigoureux des actions menées. C’est rassurant de savoir que chaque contribution est utilisée à bon escient. Grâce à cette confiance, je suis devenu donateur mensuel, fier de soutenir une association sérieuse qui change véritablement des vies. </p>
+                            <div class="client-name">Pierre Sarr</div>
+                            <div class="client-position">Entrepreneur, donateur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Statistiques -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item  w-100">
+                        <span class="stat-number" data-target="92">0</span>
+                        <div class="stat-label">Familles Aidées</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item  w-100">
+                        <span class="stat-number" data-target="85">0</span>
+                        <div class="stat-label">Donateurs Actifs</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item w-100">
+                        <span class="stat-number" data-target="36">0</span>
+                        <div class="stat-label">volontaires</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item  w-100">
+                        <span class="stat-number" data-target="50">0</span>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-4">Rejoignez notre famille de généreux donateurs</h2>
+                    <p class="lead mb-5">Ensemble, nous pouvons changer encore plus de vies et créer un impact durable dans notre communauté</p>
+                    <a href="page-de-don.html" class="btn btn-custom btn-lg">Faire un Don Maintenant</a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -425,29 +544,31 @@
 
     <footer>
 
-        <div class="row foot" style="background-color: #ff7f00;height: 200px;">
+        <div class="row foot" style="background-color: #ff7f00;height: 250px;">
             <div class="col">
                 <img src="images/don-du-coeur.jpeg.jpeg" alt="" class="logo-footer">
                 <p class="texte-footer">Notre equipe s’engage à vous apporter leurs plus grand soutien chaque demande
                     sera traitée avec attention, confidentialité et humanité.</p>
             </div>
             <div class="col">
-                <h4>LIENS UTILES</h4>
-                <ul>
-                    <li><a href="index.html" class="footer-menu">Accueil</a></li>
-                    <li><a href="page-a-propos.html" class="footer-menu">A propos de nous</a></li>
-                    <li><a href="page-nos-projets.html" class="footer-menu">Nos projets</a></li>
-                    <li><a href="page-de-don.html" class="footer-menu">Faire un don</a></li>
-                    <li><a href="page-demamde-aide.html" class="footer-menu">Demande d'aide</a></li>
-                    <li><a href="page-connexion.html" class="footer-menu">Connexion</a></li>
-                </ul>
+                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Liens utiles</h4>
+<ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-menu text-white text-decoration-none">Accueil</a></li>
+                        <li><a href="page_a_propos.html" class="footer-menu text-white text-decoration-none">À propos de nous</a></li>
+                        <li><a href="page-nos-projets.html" class="footer-menu text-white text-decoration-none">Nos projets</a></li>
+                        <li><a href="page-de-don.html" class="footer-menu text-white text-decoration-none">Faire un don</a></li>
+                        <li><a href="page-demande-aide.html" class="footer-menu text-white text-decoration-none">Demande d'aide</a></li>
+                        <li><a href="page-connexion.html" class="footer-menu text-white text-decoration-none">Connexion</a></li>
+                    </ul>
+
 
             </div>
             <div class="col">
-                <h4>CONTACTS</h4>
-                <p class="p-footer">+221 78 450 27 78</p>
-                <p class="p-footer">donducoeur@gmail.com</p>
-                <h4>Suivez nous sur</h4>
+                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Contacts</h4>
+                 <p class="mb-1">📞 +221 33 900 00 00</p>
+                    <p class="mb-3">📧 donducoeur@gmail.com</p>
+                <h5>Suivez-nous sur</h5>
+
             <div class="socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-x"></i></a>
