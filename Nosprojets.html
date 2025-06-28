@@ -6,9 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Nosprojets.css">
      <link rel="stylesheet" href="css/a_propos.css">
-    <script src="Nosprojet.js"></script>
+  
     <script defer src="map.js"></script>
-
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -542,42 +541,48 @@ Dans chaque sachet remis, il y avait bien plus que de la nourriture : un sourire
 
 
 
-    <footer>
+  <footer style="background-color: #ff7f00; padding: 40px 0;">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Colonne 1 : Logo + Texte -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <img src="images/don-du-coeur.jpeg.jpeg" alt="Logo Don du Cœur" class="logo-footer mb-3">
+        <p class="texte-footer">
+          Notre équipe s’engage à vous apporter leur plus grand soutien. Chaque demande sera traitée avec attention,
+          confidentialité et humanité.
+        </p>
+      </div>
 
-        <div class="row foot" style="background-color: #ff7f00;height: 250px;">
-            <div class="col">
-                <img src="images/don-du-coeur.jpeg.jpeg" alt="" class="logo-footer">
-                <p class="texte-footer">Notre equipe s’engage à vous apporter leurs plus grand soutien chaque demande
-                    sera traitée avec attention, confidentialité et humanité.</p>
-            </div>
-            <div class="col">
-                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Liens utiles</h4>
-<ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-menu text-white text-decoration-none">Accueil</a></li>
-                        <li><a href="page_a_propos.html" class="footer-menu text-white text-decoration-none">À propos de nous</a></li>
-                        <li><a href="page-nos-projets.html" class="footer-menu text-white text-decoration-none">Nos projets</a></li>
-                        <li><a href="page-de-don.html" class="footer-menu text-white text-decoration-none">Faire un don</a></li>
-                        <li><a href="page-demande-aide.html" class="footer-menu text-white text-decoration-none">Demande d'aide</a></li>
-                        <li><a href="page-connexion.html" class="footer-menu text-white text-decoration-none">Connexion</a></li>
-                    </ul>
+      <!-- Colonne 2 : Liens utiles -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h4 class="fw-bold mb-3" style="color: #00561b;">Liens utiles</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="footer-menu">Accueil</a></li>
+          <li><a href="page_a_propos.html" class="footer-menu">À propos de nous</a></li>
+          <li><a href="page-nos-projets.html" class="footer-menu">Nos projets</a></li>
+          <li><a href="page-de-don.php" class="footer-menu">Faire un don</a></li>
+          <li><a href="page-demande-aide.php" class="footer-menu">Demande d'aide</a></li>
+          <li><a href="page-connexion.html" class="footer-menu">Connexion</a></li>
+        </ul>
+      </div>
 
-
-            </div>
-            <div class="col">
-                    <h4 class="fw-bold mb-3" style="font-size: 2rem;">Contacts</h4>
-                 <p class="mb-1">📞 +221 33 900 00 00</p>
-                    <p class="mb-3">📧 donducoeur@gmail.com</p>
-                <h5>Suivez-nous sur</h5>
-
-            <div class="socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-x"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+      <!-- Colonne 3 : Contacts + Réseaux sociaux -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h4 class="fw-bold mb-3" style="color: #00561b;">Contacts</h4>
+        <p class="mb-1 text-white">📞 +221 33 900 00 00</p>
+        <p class="mb-3 text-white">📧 donducoeur@gmail.com</p>
+        <h5 style="color: white;">Suivez-nous sur</h5>
+        <div class="socials d-flex justify-content-center justify-content-md-start mt-2">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
-    </div>
-            
-    </footer>
+  </div>
+</footer>
+  <script src="Nosprojet.js"></script>
     
 </body>
 

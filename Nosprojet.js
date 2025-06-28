@@ -1,3 +1,7 @@
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
 document.addEventListener('DOMContentLoaded', () => {
     // === 1. INITIALISATION DE LA CARTE ===
     const thiesBounds = [

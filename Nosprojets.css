@@ -205,7 +205,8 @@ body {
 .intro-text {
   text-align: center;
   margin: 0 auto;               /* Centre horizontalement le bloc */
-  padding: 0 10px;              /* Petite marge intérieure à gauche/droite */
+  padding: 0 10px;  
+  padding-top: 10px;            /* Petite marge intérieure à gauche/droite */
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -460,7 +461,6 @@ body {
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
-
     border: 3px solid #00561b; /* ✅ Bordure verte */
 }
 
@@ -495,106 +495,36 @@ body {
 
 /* Footer */
 
-/*marge pour le logo footer*/
-footer {
-    background-color: #ff7f00;
-    padding: 40px 0;
-}
-.foot {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-
-footer {
-  background-color: #ff7f00;
-  color: white;
-}
-
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-col {
- flex: 1 1 250px;
-  min-width: 250px;
-}
-
-.texte-footer {
- font-size: 14px;
-  line-height: 1.6;
-  color: white;
-}
-
-.footer-col h4 {
-   margin-bottom: 20px;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: white;
-}
-
-.footer-col a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 8px 0;
-  transition: color 0.3s ease;
-}
-
-.footer-col a:hover {
-  color: #00561b;
-  text-decoration: underline;
-}
-
 .logo-footer {
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  margin: 0 auto 20px auto;
-}
-
-.col {
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-.texte-footer {
-  font-size: 14px;
-  color: white;
-}
-
-h4 {
-  font-size: 20px;
-  color: #00561b;
-  font-weight: bold;
-}
-
-.p-footer {
-  color: white;
-  margin-left: -2px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .footer-menu {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
- .socials {
-    justify-content: center !important;
-  }
-.socials a {
-  display: inline-block;
-  margin-right: 15px;
+.footer-menu:hover {
+  color: #00561b;
+  text-decoration: underline;
+}
+
+.texte-footer {
+  font-size: 14px;
   color: white;
+  line-height: 1.6;
+}
+
+.socials a {
+  color: white;
+  margin-right: 25px;
   font-size: 24px;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -603,11 +533,46 @@ h4 {
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .footer-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: auto;
+  .socials {
+    justify-content: center !important;
+  }
+
+  .logo-footer {
+    margin: 0 auto 15px auto;
+  }
+
+  .texte-footer {
+    text-align: center;
+  }
 }
+
+
+/* Responsive spécifique si besoin */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  .footer-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .socials {
+    justify-content: center !important;
+  }
+
+  .footer-col {
+    margin-bottom: 30px;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
