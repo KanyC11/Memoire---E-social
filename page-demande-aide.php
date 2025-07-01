@@ -71,14 +71,14 @@ $conn->close();
     <div class="row" style="margin-top: 2rem; ">
         <div class="col">
             <div class="banners2">
-                <div class="overla">
-                    <div class="content">
+                <div class="overlas">
+                    <div class="contents">
                         <p>
                             Ensemble nous semons des graines d’espoir,<br> de solidarité et de compassion. <br>
                             Vos demandes seront traitées avec amour <br> et dans les régles <br> de la confidentialité.
                             Vous n’ étes pas seule<br> nous sommes là pour <br> vous tendre la main et vous redonner le
                             sourir <br>
-                            &lt; &lt; un don, un sourire >> </p>
+                             un don, un sourire  </p>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@ $conn->close();
                 <input type="email" name="mail" placeholder="Mail" required>
                 <label for="demande" class="required">Type de demande</label>
                 <select name="les_demandes" required>
-                    <option value="" disabled selected>Veillez sélectionner votre demande </option>
+                    <option value="" disabled selected>Sélectionner votre demande </option>
                     <option value="Don de sang">Don de sang</option>
                     <option value="nourriture">Nourriture</option>
                     <option value="argent">Argent</option>
