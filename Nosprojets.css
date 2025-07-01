@@ -42,14 +42,18 @@ img {
 }
 /* Bouton hamburger */
 .menu-toggle {
-  display: none;
+  display: none; /* s'affiche seulement en responsive */
   font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
   color: #00561b;
   z-index: 1000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
+
 
 /* Menu responsive */
 @media (max-width: 768px) {
@@ -304,7 +308,7 @@ body {
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  margin-top: 20px;
+  margin-top: -20px;
   text-decoration: underline;
   text-decoration-color: #ff7f00;
 }
@@ -418,6 +422,37 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .green-title {
+    font-size: 20px;
+  }
+
+  .action-box,
+  .action-box1 {
+    font-size: 20px;
+  }
+
+  .green-text,
+  .action-text {
+    font-size: 15px !important;
+  }
+
+  .intro-text {
+    font-size: 15px;
+  }
+
+  .taille-uniforme {
+    max-height: 200px;
+  }
+
+  .rim {
+    flex-direction: column;
+  }
 }
 
 /* S'assurer que le parent prend toute la hauteur */
