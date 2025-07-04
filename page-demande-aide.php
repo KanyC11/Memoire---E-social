@@ -1,37 +1,43 @@
 <?php
 session_start();
-// if (!isset($_SESSION['Email'])) {
-//     // Redirection de l'utilisateur vers la page de connexion si il n'est pas connecté
-//     header("Location: connexion.php");
-//     exit();
-// }
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // connexion a la base de donne
-$conn= new mysqli("localhost","root","","dons");
-// verifie la connexion
-if($conn-> connect_error){
-    die("Connexion  échouée:". $connect_error);
-}
-// créer les variables et les initialisées à vide
-$nom_prenom = $email = $adresse = $descriptions = $telephone = $demandes = "";
-// Récupération des données du formulaire
-$nom_prenom=htmlspecialchars( $_POST['nom_prenom']);
-$adresse=htmlspecialchars( $_POST['adresse']);
-$telephone= htmlspecialchars($_POST['telephone']);
-$email=htmlspecialchars( $_POST['mail']);
-$demandes= htmlspecialchars($_POST['les_demandes']);
-$descriptions=htmlspecialchars( $_POST['descriptions']);
-// requete sql insertion
-$sql= "INSERT INTO aides (nom_prenom,adresse,telephone,mail,les_demandes,descriptions)
-      VALUES ('$nom_prenom' ,'$adresse', '$telephone','$email','$demandes','$descriptions' )";
+session_regenerate_id(true);
 
-if($conn->query($sql)=== TRUE){
-    echo "";
-}else{
-    echo"Erreur : ". $sql . "<br/>" . $conn->error;
+// Si le formulaire est soumis
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    if (!isset($_SESSION['Email'])) {
+        echo "<script>
+                alert('Vous devez être connecté pour faire une demande.');
+                window.location.href = 'connexion.php';
+              </script>";
+        exit();
+    }
+
+    $conn = new mysqli("localhost", "root", "", "dons");
+
+    if ($conn->connect_error) {
+        die("Connexion échouée : " . $conn->connect_error);
+    }
+
+    $nom_prenom = htmlspecialchars(trim($_POST['nom_prenom']));
+    $adresse = htmlspecialchars(trim($_POST['adresse']));
+    $telephone = htmlspecialchars(trim($_POST['telephone']));
+    $email = htmlspecialchars(trim($_POST['mail']));
+    $demandes = htmlspecialchars(trim($_POST['les_demandes']));
+    $descriptions = htmlspecialchars(trim($_POST['descriptions']));
+
+    $stmt = $conn->prepare("INSERT INTO aides (nom_prenom, adresse, telephone, mail, les_demandes, descriptions) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nom_prenom, $adresse, $telephone, $email, $demandes, $descriptions);
+
+    if ($stmt->execute()) {
+        $success = true;
+    } else {
+        echo "Erreur : " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
 }
-$conn->close();
-} 
 ?>
 
 <!DOCTYPE html>
@@ -43,10 +49,11 @@ $conn->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="demande-aide.css">
     <link rel="stylesheet" href="a_propos.css">
+    <link rel="stylesheet" href="auth.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="images/favicon_Plan de travail 1.jpg">
-    <title>À propos de nous - Don du Cœur</title>
+    <title>Demande d'aide</title>
 </head>
 
 <body>
@@ -63,7 +70,9 @@ $conn->close();
             <a href="Nosprojets.html" class="menu">Nos projets</a>
             <a href="page_de_don.html" class="menu">Faire un don</a>
             <a href="page_demande_aide.html" class="menu">Demande d'aide</a>
-            <a href="page-connexion.html" class="menu">Connexion</a>
+            <a href="connexion.php" class="menu">Connexion</a>
+            <a href="inscription.php" class="menu"></a>
+        
         </div>
     </nav>
 
@@ -85,7 +94,7 @@ $conn->close();
         </div>
         <div class="col aide2">
             <h3 style="color: white;text-align: center;margin-top: 2rem;font-style: italic;">Demande de don</h3>
-            <form action="" method="POST">
+            <form id="formulaire" action="" method="POST" onsubmit="return verifierConnexion();">
 
                 <label for="nom_prenom" class="required">Nom & Prénom</label>
                 <input type="text" name="nom_prenom" placeholder="Nom complet" required>
@@ -140,9 +149,9 @@ $conn->close();
                                 projets</a></li>
                         <li><a href="page-de-don.html" class="footer-menu text-white text-decoration-none">Faire un
                                 don</a></li>
-                        <li><a href="page-demande-aide.html" class="footer-menu text-white text-decoration-none">Demande
+                        <li><a href="page-demande-aide.php" class="footer-menu text-white text-decoration-none">Demande
                                 d'aide</a></li>
-                        <li><a href="page-connexion.html"
+                        <li><a href="connexion.php"
                                 class="footer-menu text-white text-decoration-none">Connexion</a></li>
                     </ul>
                 </div>
@@ -190,22 +199,43 @@ $conn->close();
         });
     </script>
     <script>
-        const form = document.querySelector("form");
-        const merciMessage = document.getElementById("merciMessage");
+function verifierConnexion() {
+    var estConnecte = <?php echo isset($_SESSION['Email']) ? 'true' : 'false'; ?>;
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Empêche l'envoi du formulaire temporairement
+    if (!estConnecte) {
+        alert("Vous devez être connecté pour faire une demande.");
+        window.location.href = "connexion.php";
+        return false; // Empêche l'envoi
+    }
+    return true; // Autorise l'envoi
+}
+</script>
+   <script>
+const form = document.querySelector("form");
+const merciMessage = document.getElementById("merciMessage");
 
-            // Afficher le message de remerciement
-            merciMessage.style.display = "block";
+// Simuler la session PHP dans JS
+var estConnecte = <?php echo isset($_SESSION['Email']) ? 'true' : 'false'; ?>;
 
-            // Masquer le message après 5 secondes
-            setTimeout(() => {
-                merciMessage.style.display = "none";
-                form.submit(); // Soumettre le formulaire après 7s
-            }, 7000);
-        });
-    </script>
+form.addEventListener("submit", function (event) {
+    if (!estConnecte) {
+        alert("Vous devez être connecté pour faire une demande.");
+        window.location.href = "connexion.php";
+        event.preventDefault(); // Bloque l'envoi
+        return;
+    }
+
+    event.preventDefault(); // Bloque l'envoi temporairement
+
+    // Afficher le message de remerciement seulement si connecté
+    merciMessage.style.display = "block";
+
+    setTimeout(() => {
+        merciMessage.style.display = "none";
+        form.submit(); // Soumettre le formulaire après 5s
+    }, 5000);
+});
+</script>
 
 </body>
 
