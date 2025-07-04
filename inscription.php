@@ -42,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if ($stmt->execute()) {
                     $message = "✅ Inscription réussie ! Vous pouvez maintenant vous connecter.";
                     $messageClass = "alert-success";
+                    // Redirection automatique après 3 secondes
+                     header("Refresh: 3; URL=connexion.php");
                     // Optionnel : vider les variables pour vider le formulaire
                     $prenom = $nom = $email = $telephone = "";
                 } else {

@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if (password_verify($password, $user['mot_de_passe'])) {
                     // Connexion réussie
                     $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['user_email'] = $email;
+                    $_SESSION['Email'] = $email;
                     $message = "✅ Connexion réussie. Bienvenue !";
                     $messageClass = "alert-success";
 
@@ -123,7 +123,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     Se souvenir de moi
                                 </label>
                             </div>
-                            
+                             <a href="mot-de-passe-oublie.php" class="forgot-password">
+                                Mot de passe oublié ?
+                            </a>
                         </div>
 
                         <button type="submit" class="btn-auth btn-primary">
