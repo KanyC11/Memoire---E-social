@@ -243,7 +243,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     </footer>  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   
+   <script>
+   function togglePassword(fieldId) {
+    const passwordInput = document.getElementById(fieldId);
+    const toggleBtn = passwordInput.nextElementSibling.querySelector('i');
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleBtn.classList.remove("fa-eye");
+        toggleBtn.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        toggleBtn.classList.remove("fa-eye-slash");
+        toggleBtn.classList.add("fa-eye");
+    }
+}
+</script>
       
     </body>
     </html>
